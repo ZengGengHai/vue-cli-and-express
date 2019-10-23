@@ -1,6 +1,7 @@
 ---
 
-typora-root-url: img
+typora-root-url: ./
+
 ---
 
 
@@ -9,7 +10,7 @@ typora-root-url: img
 
 
 
-![1571801184948](/1571801184948.png)
+![1571806937686](/img/1571806937686.png)
 
 
 
