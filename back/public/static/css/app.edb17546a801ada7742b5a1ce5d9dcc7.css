@@ -1,0 +1,22 @@
+.site-content{padding-left:3vw;padding-right:3vw;padding-top:80px}@media only screen and (min-width:1001px){.site-content{padding-left:320px;padding-right:3.333em;padding-top:3.333em}}@media only screen and (min-width:801px) and (max-width:1001px){.site-content{padding-left:32vw;padding-right:3.333em;padding-top:3.333em}}h1[data-v-d8ec41bc],h2[data-v-d8ec41bc]{font-weight:400}ul[data-v-d8ec41bc]{list-style-type:none;padding:0}li[data-v-d8ec41bc]{display:inline-block;margin:0 10px}a[data-v-d8ec41bc]{color:#42b983}a[data-v-7ceb98dd]{text-decoration:none}.site-header[data-v-7ceb98dd]{background:#1d1d1d;color:#fff;height:100%;position:fixed;left:0;top:0;text-align:center}.profile img[data-v-7ceb98dd]{width:100px;border:2px solid #d4a259;border-radius:50%}.site-identify[data-v-7ceb98dd]{padding-bottom:1.6em}.site-identify h1[data-v-7ceb98dd]{font-size:30px;line-height:1}.site-identify p[data-v-7ceb98dd]{font-size:12px;color:#666}.menu[data-v-7ceb98dd]{font-size:.8rem;color:#aaa;line-height:1.5;letter-spacing:.15em;text-transform:uppercase;padding:0}.menu-item[data-v-7ceb98dd]{list-style:none;padding:.5rem 0}.menu-item a[data-v-7ceb98dd]{color:#aaa;cursor:pointer}.menu-item a[data-v-7ceb98dd]:hover{color:#d4a259}.menu-item-select[data-v-7ceb98dd]{color:#d4a259!important}@media only screen and (min-width:1001px){.site-header[data-v-7ceb98dd]{width:300px}.site-header-inside[data-v-7ceb98dd]{padding:3.333em 30px}}@media only screen and (min-width:801px) and (max-width:1001px){.site-header[data-v-7ceb98dd]{width:30vw}.site-header-inside[data-v-7ceb98dd]{padding-bottom:3.3333em;padding-top:3.3333em}}@media only screen and (max-width:800px){.site-header[data-v-7ceb98dd]{width:100%;height:78px}.profile img[data-v-7ceb98dd]{width:50px}}.site-header-wrap[data-v-7ceb98dd]{height:100%;overflow:auto;-webkit-overflow-scrolling:touch}
+
+
+
+/*!
+ * Agate by Taufik Nurrohman <https://github.com/tovic>
+ * ----------------------------------------------------
+ *
+ * #ade5fc
+ * #a2fca2
+ * #c6b4f0
+ * #d36363
+ * #fcc28c
+ * #fc9b9b
+ * #ffa
+ * #fff
+ * #333
+ * #62c8f3
+ * #888
+ *
+ */.hljs{display:block;overflow-x:auto;padding:.5em;background:#333;color:#fff}.hljs-name,.hljs-strong{font-weight:700}.hljs-code,.hljs-emphasis{font-style:italic}.hljs-tag{color:#62c8f3}.hljs-selector-class,.hljs-selector-id,.hljs-template-variable,.hljs-variable{color:#ade5fc}.hljs-bullet,.hljs-string{color:#a2fca2}.hljs-attribute,.hljs-built_in,.hljs-builtin-name,.hljs-quote,.hljs-section,.hljs-title,.hljs-type{color:#ffa}.hljs-bullet,.hljs-number,.hljs-symbol{color:#d36363}.hljs-keyword,.hljs-literal,.hljs-selector-tag{color:#fcc28c}.hljs-code,.hljs-comment,.hljs-deletion{color:#888}.hljs-link,.hljs-regexp{color:#c6b4f0}.hljs-meta{color:#fc9b9b}.hljs-deletion{background-color:#fc9b9b;color:#333}.hljs-addition{background-color:#a2fca2;color:#333}.hljs a{color:inherit}.hljs a:focus,.hljs a:hover{color:inherit;text-decoration:underline}
+/*# sourceMappingURL=app.edb17546a801ada7742b5a1ce5d9dcc7.css.map */
