@@ -1,5 +1,6 @@
 ---
-typora-copy-images-to: img
+
+typora-root-url: img
 ---
 
 
@@ -8,7 +9,7 @@ typora-copy-images-to: img
 
 
 
-![1571800876532](.\img\批注 2019-10-23 112010.png)
+![1571801184948](/1571801184948.png)
 
 
 
