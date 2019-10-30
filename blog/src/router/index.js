@@ -3,9 +3,12 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Header from "@/components/Header"
 import Home from "@/components/Home"
-import About from "@/components/about"
-import Note from "@/components/note"
-import Article from "@/components/Article"
+import About from "@/components/about/About"
+
+import Note from "@/components/article/note"
+import Article from "@/components/article/Article"
+
+import  Adminhome from "@/components/admin/home/Home"
 
 
 Vue.use(Router)
@@ -48,7 +51,19 @@ export default new Router({
         header:Header,
         main:Article
       }
+    },
+    {
+      path: '/admin',
+      name: 'admin',
+      components: {
+        admin:Adminhome
+      
+      }
     }
+   
 
+
+
+    
   ]
 })

@@ -226,9 +226,13 @@ http://localhost:8080/index
 
       https://github.com/highlightjs/highlight.js/tree/master/src/styles
 
-9. ...
+9. 使用vue-quill-editor富文本编辑器
 
-10. ...
+npm install vue-quill-editor
+再安装依赖项
+npm install quill
+10. 编写接口
+
 
 11. ...
 

@@ -3,6 +3,7 @@
  
     <router-view name="header"/>
     <router-view name="main" class="site-content"/>
+     <router-view name="admin"/>
   
   </div>
 </template>
@@ -14,6 +15,9 @@ export default {
 </script>
 
 <style>
+body{
+  margin:0px;
+}
 .site-content{
   padding-left:3vw;
   padding-right:3vw;
