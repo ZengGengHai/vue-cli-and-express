@@ -72,5 +72,4 @@ sequelize.authenticate().then(()=>{
 
 
 
-module.exports = Blog;
-module.exports = Admin;
+module.exports = {Blog,Admin};

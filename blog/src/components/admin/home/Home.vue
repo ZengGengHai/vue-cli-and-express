@@ -5,7 +5,7 @@
     
        <el-row type="flex" class="row-bg" justify="space-between">
         <el-col :span="6"><div ></div>vue-cli+node-express</el-col>
-        <el-col :span="5"><div >Blog后台管理系统</div></el-col>
+        <el-col :span="5"><div >博客后台系统</div></el-col>
         <el-col :span="6"><div >
            <el-row  >
             <el-col :span="10" style=""><div>{{adminName}}</div></el-col>
@@ -23,7 +23,7 @@
             <el-col :span="24">
               <h5 style="text-align:center">导览</h5>
               <el-menu
-                default-active="/home/databases/users"
+                default-active="/admin/databases/users"
                  class="el-menu-vertical-demo"
                 @open="handleOpen"
                 @close="handleClose"
@@ -37,8 +37,8 @@
                     <i class="el-icon-location" ></i>
                     <span >开发</span>
                   </template>    
-                  <el-menu-item index="/home/databases/users">数据</el-menu-item>
-                  <el-menu-item index="/home/datas">统计</el-menu-item>
+                  <el-menu-item index="/admin/databases/users">数据</el-menu-item>
+                  <el-menu-item index="/admin/statistics">统计</el-menu-item>
      
              
         
@@ -113,7 +113,7 @@ export default {
           localStorage.removeItem('token')
           localStorage.removeItem('adminName')
           //跳回登录页面
-          this.$router.push('/login')
+          this.$router.push('/admin/login')
           this.$message({
             type: 'success',
             message: '退出成功!'
@@ -126,7 +126,8 @@ export default {
         });
       },
       pushName(){
-        let adminName = localStorage.getItem('adminName')
+        let admin =JSON.parse(localStorage.getItem('admin'))
+        let adminName = admin.username
        this.adminName = adminName;
       },
       changeMenu(){

@@ -1,17 +1,32 @@
 var express = require('express');
 var router = express.Router();
 
-const Blog = require('../db/ORM');
+const db = require('../db/ORM');
+
+console.log(db.Blog)
 /* GET article api. */
 
 // api总览
+router.get('/blog_table', function(req, res, next) {
+    let result =[
+    { label: "id", prop: "id", type: "normal",content:' ',show:true,data:'int'},
+    { label: "标题", prop: "title", type: "normal" ,content:' ',show:true,data:'varchar'},
+    { label: "内容", prop: "content", type: "normal" ,content:' ',show:true,data:'varcharfwb'},
+    { label: "创建时间", prop: "createdAt", type: "normal",content:' ',show:true,data:'data'},
+    { label: "更新时间", prop: "createdAt", type: "normal",content:' ',show:true,data:'data'}]
+    returnJSON(res,{
+        code:0,
+        msg:'welcome to  use blogtable',
+        data:result
+    })
+});
 router.get('/blog_api', function(req, res, next) {
     let result = {
-        GET_0:'http://127.0.0.1:3000/api/article?id=1',
-        GET_1:'http://127.0.0.1:3000/api/article_list?limit=5&offset=0',
-        POST_2:'http://127.0.0.1:3000/api/article_create (title content)',
-        POST_3:'http://127.0.0.1:3000//api/article_delete  (id)',
-        POST_4:'http://127.0.0.1:3000//api/article_update  (id title content)'
+        GET_0:'http://127.0.0.1:3000/api/blog?id=1',
+        GET_1:'http://127.0.0.1:3000/api/blog_list?limit=5&offset=0',
+        POST_2:'http://127.0.0.1:3000/api/blog_create (title content)',
+        POST_3:'http://127.0.0.1:3000//api/blog_delete  (id)',
+        POST_4:'http://127.0.0.1:3000//api/blog_update  (id title content)'
   
     }
     returnJSON(res,{
@@ -24,11 +39,11 @@ router.get('/blog_api', function(req, res, next) {
 // 根据id查询单个blog对象 
 router.get('/blog', function(req, res, next) {
     if(req.query.id){
-        Blog.findAll({where:{id:req.query.id},raw:true}).then((result) => {        
+        db.Blog.findOne({where:{id:req.query.id},raw:true}).then((result) => {        
             if(isNaN(result)){
                 returnJSON(res,{
                     code:0,
-                    data:[result]
+                    data:result
                 })
             }else{
                 returnJSON(res,{
@@ -51,8 +66,9 @@ router.get('/blog', function(req, res, next) {
 router.get('/blog_list', function(req, res, next) {
     let {limit, offset} = req.query
     console.log(limit,offset)
+  
     if(!isNaN(parseInt(limit)) && !isNaN(parseInt(offset))){
-        Blog.findAndCountAll({
+        db.Blog.findAndCountAll({
             limit:limit*1,
             offset:offset*1,
             'order':[
@@ -60,16 +76,26 @@ router.get('/blog_list', function(req, res, next) {
             ],
             where:{}
         }).then((e) => { 
-            if(isNaN(e.rows)){
+            
+            if(isNaN(e)){
+                console.log(e)
+                if(e.count === 0){
+                    returnJSON(res,{
+                        code:2,
+                        data:[],
+                        msg:'没有数据'
+                    })   
+                }
                 //判断下一次查询是否会有数据
                 let hasMore = limit*1 + offset*1 < e.count ? true: false
                 let result = {
                     hasMore,
-                    list:[e.rows]
+                    count:e.count,
+                    list:e.rows
                 }
                 returnJSON(res,{
                     code:0,
-                    data:[result]
+                    data:result
                 })
             }else{
                 returnJSON(res,{
@@ -91,15 +117,12 @@ router.get('/blog_list', function(req, res, next) {
 
 //创建数据项   POST   /api/blog_create  (title content)',
 router.post('/blog_create',function(req,res,next){  
-    let body ="";
-    req.on('data',function(chunk){
-        body += chunk;
-    });
-    req.on('end',function(){
-        let {title,content} = JSON.parse(body)
-        if(title && content){
+   
+        let {title,content} = req.body
+        console.log(title)
+        if(title!=undefined  || content !=undefined ){
             console.log("ok")
-            Blog.create({title,content}).then(function(result){
+            db.Blog.create({title,content}).then(function(result){
                 if(result){
                     returnJSON(res,{
                         code:0,
@@ -121,20 +144,16 @@ router.post('/blog_create',function(req,res,next){
                 msg:'在body里面写  {"title":"title","content":"content"} '
             })
         } 
-    })
+    
 });
 
 
 //删除数据项   POST    /api/blog_delete  (id)',
 router.post('/blog_delete',function(req,res,next){  
-    let body ="";
-    req.on('data',function(chunk){
-        body += chunk;
-    });
-    req.on('end',function(){
-        let {id} = JSON.parse(body)
-        if(id){
-            Blog.destroy({ 
+  
+        let {id} = req.body
+        if(id != undefined){
+            db.Blog.destroy({ 
                 where: {
                     id
                 }
@@ -142,7 +161,7 @@ router.post('/blog_delete',function(req,res,next){
                 if(result){
                     returnJSON(res,{
                         code:0,
-                        data:{id}
+                        data:id
                     })   
                 }else{
                     returnJSON(res,{
@@ -157,27 +176,24 @@ router.post('/blog_delete',function(req,res,next){
                 msg:"在body里面写  {'id':'6'} "
             })
         } 
-    })
+    
 });
 
 
 //更新数据项   POST:'/api/blog_update  (id title content)'
 router.post('/blog_update',function(req,res,next){  
-    let body ="";
-    req.on('data',function(chunk){
-        body += chunk;
-    });
-    req.on('end',function(){
-        let {id,title,content} = JSON.parse(body)
-        if(!id){
+
+        let {id,title,content} = req.body
+        
+        if(id ===  undefined){
             returnJSON(res,{
                 code:-2,
-                msg:"Id参数必须写，在body里面写  {'id':'6',......} "
+                msg:"Id参数必须写"
             })
          }
          if(title !=undefined || content != undefined){
              console.log("dd")
-            Blog.update({title,content}, {where: {id}}
+            db.Blog.update({title,content}, {where: {id}}
                 ).then(function(result){
                 if(result){
                     returnJSON(res,{
@@ -197,7 +213,7 @@ router.post('/blog_update',function(req,res,next){
                 msg:"Id参数必须写，title 或 content 修改其中一项 "
             }) 
          }
-    })
+    
 });
 
 

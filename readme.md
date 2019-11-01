@@ -234,10 +234,12 @@ npm install quill
 10. 编写接口
 
 
-11. ...
+11. axios 中 post请求 qs进行序列化
+  npm i qs
 
-12. ...
+12.格式化时间 cnpm  i monent -S
 
 
+13. ...
 
-
+14. ...
