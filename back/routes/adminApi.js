@@ -8,11 +8,16 @@ const db = require('../db/ORM');
 // 表结构总览
 router.get('/admin_table', function(req, res, next) {
     let result =[
-    { label: "id", prop: "id", type: "normal" },
-    { label: "账号", prop: "username", type: "normal" },
-    { label: "密码", prop: "password", type: "normal" },
-    { label: "创建时间", prop: "createdAt", type: "normal" },
-    { label: "更新时间", prop: "createdAt", type: "normal" }]
+    { label: "id", prop: "id", type: "normal" ,content:'',show:false,data:'int'},
+    { label: "账号", prop: "username", type: "normal",content:' ',show:true,data:'varchar' },
+    { label: "密码", prop: "password", type: "normal",content:' ',show:true,data:'varchar' },
+    { label: "创建时间", prop: "createdAt", type: "normal" ,content:'',show:true,data:'data'},
+    { label: "更新时间", prop: "createdAt", type: "normal" ,content:'',show:true,data:'data'}]
+
+
+    
+
+
     returnJSON(res,{
         code:0,
         msg:'welcome to  use adminTable',

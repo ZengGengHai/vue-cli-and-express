@@ -56,7 +56,7 @@
                 if(status === 200){
                     if(data.code === 0){
                         localStorage.setItem('admin',JSON.stringify(data.data[0]))
-                        this.$router.push('/admin')
+                        this.$router.push('/admin/databases/table/admin')
                     }else{
                         this.$message({
                             showClose: true,

@@ -9,14 +9,14 @@ console.log(db.Blog)
 // api总览
 router.get('/blog_table', function(req, res, next) {
     let result =[
-    { label: "id", prop: "id", type: "normal",content:' ',show:true,data:'int'},
-    { label: "标题", prop: "title", type: "normal" ,content:' ',show:true,data:'varchar'},
-    { label: "内容", prop: "content", type: "normal" ,content:' ',show:true,data:'varcharfwb'},
-    { label: "创建时间", prop: "createdAt", type: "normal",content:' ',show:true,data:'data'},
-    { label: "更新时间", prop: "createdAt", type: "normal",content:' ',show:true,data:'data'}]
+    { label: "id", prop: "id", type: "normal",content:' ',show:false,data:'int'},
+    { label: "标题", prop: "title", type: "normal" ,content:' ',show:true,data:'varChar'},
+    { label: "内容", prop: "content", type: "normal" ,content:' ' ,show:true,data:'varCharFwb'},
+    { label: "创建时间", prop: "createdAt", type: "normal",content:'',show:true,data:'data'},
+    { label: "更新时间", prop: "updatedAt", type: "normal",content:' ',show:true,data:'data'}]
     returnJSON(res,{
         code:0,
-        msg:'welcome to  use blogtable',
+        msg:'welcome to  use blog_table',
         data:result
     })
 });
@@ -72,7 +72,7 @@ router.get('/blog_list', function(req, res, next) {
             limit:limit*1,
             offset:offset*1,
             'order':[
-                ['createdAt','DESC']
+                ['id','DESC']
             ],
             where:{}
         }).then((e) => { 

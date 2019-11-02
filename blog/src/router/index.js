@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+
 import Header from "@/components/Header"
 import Home from "@/components/Home"
 import About from "@/components/about/About"
@@ -12,7 +12,8 @@ import  AdminHome from "@/components/admin/home/Home"
 import  AdminLogin from "@/components/admin/login/Login"
 import  DataBases from "@/components/admin/databases/Index"
 import  TableModule from "@/components/admin/databases/TableModule"
-import AdminTable from "@/components/admin/databases/Admin"
+
+import Statistics from "@/components/admin/statistics/Statistics"
 
 Vue.use(Router)
 
@@ -66,10 +67,10 @@ const router = new Router({
       children:[
         {path:'databases',component:DataBases,
         children:[
-          {path:'table/:id',component:TableModule},
-          {path:'admin',component:AdminTable}
-        ]
-      }
+            {path:'table/:id',component:TableModule}
+          ]
+        },
+        {path:'statistics',component:Statistics}
     
       ]
     },

@@ -1,5 +1,5 @@
 <template>
-  <div style="min-width:900px;" >
+  <div style="min-width:900px; margin:0px;" >
     <el-container>
       <el-header>
     
@@ -23,7 +23,7 @@
             <el-col :span="24">
               <h5 style="text-align:center">导览</h5>
               <el-menu
-                default-active="/admin/databases/users"
+                default-active="/admin/databases/table/admin"
                  class="el-menu-vertical-demo"
                 @open="handleOpen"
                 @close="handleClose"
@@ -32,33 +32,33 @@
                 :collapse="isCollapse"
 
                 >
-                <el-submenu index="1" >
+                <el-submenu index="/admin/databases/table" >
                   <template slot="title" >
                     <i class="el-icon-location" ></i>
                     <span >开发</span>
                   </template>    
-                  <el-menu-item index="/admin/databases/users">数据</el-menu-item>
+                  <el-menu-item index="/admin/databases/table/admin">数据</el-menu-item>
                   <el-menu-item index="/admin/statistics">统计</el-menu-item>
      
              
         
                 </el-submenu>
-                <el-menu-item index="2">
+                <el-menu-item index="/admin/2">
                   <i class="el-icon-menu"></i>
                   <span slot="title">功能</span>
                 </el-menu-item>
-                <el-menu-item index="3" >
+                <el-menu-item index="/admin/3" >
                   <i class="el-icon-document"></i>
                   <span slot="title">文件</span>
                 </el-menu-item>
-                <el-menu-item index="4">
+                <el-menu-item index="/admin/4">
                   <i class="el-icon-setting"></i>
                   <span slot="title">设置</span>
                 </el-menu-item>
               </el-menu>
             </el-col>   
           </el-row>
-<el-row class="btn" type="flex" justify="end" >
+<el-row class="btn" type="flex" justify="end"  :class="[ isCollapse?'smallWidth':'bigWidth']" >
   <!-- <el-col style="width:50px;" ><div>
     <el-radio-group v-model="isCollapse"  >
     <el-radio :label="false" type="text" size="mini"  v-show="isCollapse"  class="showbox">  k</el-radio>
@@ -90,7 +90,7 @@ export default {
     return {
      adminName:'',
      //导航栏的展开与收起
-      isCollapse: false,
+    isCollapse: false,
 
     
 
@@ -181,7 +181,7 @@ export default {
     box-sizing: border-box;   
   }
 .el-container{
-    height:100vh;
+    min-height:100vh;
 }
 .el-menu{
   /* border:1px solid red; */
@@ -198,11 +198,27 @@ export default {
 
 }
 /* 导航栏的开关按钮样式 */
-  .btn{
-    position: absolute;
-    bottom: 0;
-    width:100%;
-  }
+.btn{
+  position:fixed;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+
+}
+
+.bigWidth{
+  width:130px;
+  transition:ease-in-out width 0.3s;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.smallWidth{
+  width:65px;
+  transition:ease-in-out  width 0.3s;
+  box-shadow:0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+
   .show-menu{
     padding:10px;
   }

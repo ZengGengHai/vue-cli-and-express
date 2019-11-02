@@ -1,5 +1,5 @@
 <template>
- <div class="edit_container">
+ <div class="edit_container  blog_home">
         <quill-editor 
             v-model="content" 
             ref="myQuillEditor" 
@@ -58,11 +58,13 @@ export default {
                     }
             }
         }
-  },computed: {
+  },
+  computed: {
         editor() {
             return this.$refs.myQuillEditor.quill;
         },
-    },methods: {
+    },
+  methods: {
         onEditorReady(editor) { // 准备编辑器
         },
         onEditorBlur(){}, // 失去焦点事件
@@ -76,16 +78,43 @@ export default {
 </script>
 
 <style lang="">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+ .blog_home {
+  /* font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 60px; */
+  background: red;
 }
 .ql-toolbar.ql-snow{
     display: flex;
     flex-wrap: wrap;
 }
+ body{
+  margin:0px;
+}
+.site-content{
+  padding-left:3vw;
+  padding-right:3vw;
+  padding-top:80px;
+
+}
+@media only screen and (min-width:1001px){
+  .site-content{
+    padding-left:320px;
+    padding-right:3.333em;
+    padding-top:3.333em;
+
+  }
+}
+@media only screen and (min-width:801px) and (max-width:1001px){
+  .site-content{
+    padding-left:32vw;
+    padding-right:3.333em;
+    padding-top:3.333em;
+
+  }
+} 
+
 </style>
