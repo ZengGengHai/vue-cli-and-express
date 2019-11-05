@@ -2,8 +2,46 @@ const express = require('express');
 const router = express.Router();
 const db = require('../db/ORM');
 
+
 //JSON WEBTOKEN
 const jwt = require('jsonwebtoken');
+
+
+//文件上传
+const fs = require('fs')
+const multer = require('multer')
+
+
+const storage = multer.diskStorage({
+    destination: function(req, file, cb) {
+      cb(null, 'public/upload-single/') // 保存的路径，备注：需要自己创建
+    },
+    //文件名字的确定 multer默认帮我们取一个没有扩展名的文件名，因此需要我们自己定义
+    filename(req, file, cb){
+        var first = file.originalname.lastIndexOf(".");//取到文件名开始到最后一个点的长度
+        var nameLength = file.originalname.length;//取到文件名长度
+        var fileSuffix = file.originalname.substring(first, nameLength );//截取获得后缀名
+        console.log(fileSuffix)
+
+
+        cb(null, Date.now() +Math.floor(100*Math.random())+fileSuffix)
+    }
+ })
+//传入storage 除了这个参数我们还可以传入dest等参数
+const upload = multer({storage})
+
+//文章图片
+router.post('/upload/singleFile',upload.single('file'),function(req,res,next){  
+
+    //给客户端返回图片的访问地址 域名 + 文件名字 
+    //因为在 app.js文件里面我们已经向外暴漏了存储图片的文件夹 uploa
+    const url = 'http://localhost:3000/' + req.file.filename
+    res.json({url})
+
+});
+
+
+
 
 
 /* GET article api. */
@@ -223,12 +261,6 @@ router.post('/blog_update',function(req,res,next){
 
 
 
-//文章图片
-router.post('/upload/singleFile',function(req,res,next){  
-
-    console.log(req,"img")
-
-});
 
 
 

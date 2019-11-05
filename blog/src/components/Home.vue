@@ -17,7 +17,7 @@
 
 
           <p style="letter-spacing:1px;color:#333;">{{item.abstract}}</p>
-          <div><div  style="font-size:12px;color:green;font-weight:bloder;" @click="openContent(item.id)" ref="tip" >查看内容</div></div>
+          <div><div  style="font-size:12px;color:green;font-weight:bloder;cursor: pointer;" @click="openContent(item.id)" ref="tip" >查看内容</div></div>
           <div ref="content" class="blog-content" v-html="item.content" ></div>
           
           <div style="margin-top:15px;color: #738a94;font-size:10px;">{{item.updatedAt}}</div>
@@ -34,7 +34,7 @@
                       layout="total, prev, pager, next" 
                       :page-size="pageSize"                    
                       :total="total"
-                      :page-sizes = [3,6,9]
+                      :page-sizes = [5,10,15]
                       :current-page.sync = "curPage"
                       @current-change = "changePage"
                       @size-change = "handleSizeChange">
@@ -79,7 +79,7 @@ export default {
             ],
             blogLists:[],
             //每页大小
-            pageSize:3,
+            pageSize:5,
             //当前页码
             curPage:1,
             //总条数

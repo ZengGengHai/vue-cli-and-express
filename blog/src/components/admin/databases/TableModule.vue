@@ -71,12 +71,11 @@
             </el-col>
         </el-row>
 
-        <el-row type="flex" class="pagination" justify="end">
+        <el-row type="flex" class="pagination" justify="end" align="middle">
             <el-col :span="20"><div class="grid-content" style="text-align:right">
                     <el-pagination
                         layout="total, prev, pager, next,sizes,jumper" 
-                        small
-                        background
+       
                         :page-size="pageSize"                    
                         :total="total"
                         :page-sizes = [3,6,9,12]
@@ -246,7 +245,7 @@
       [{'color': []}, {'background': []}],          // dropdown with defaults from theme
       [{'font': []}],
       [{'align': []}],
-      ['link', 'image', 'video'],
+      ['link', 'image'],
       ['clean']                                         // remove formatting button
     ]
 
@@ -635,7 +634,7 @@ export default {
           let quill = this.$refs.myQuillEditor.quill;
           let range = quill.getSelection();
             let length = range.index;
-            quill.insertEmbed(length, "image", res.data);
+            quill.insertEmbed(length, "image", res.url);
             quill.setSelection(length + 1);
         
     },
