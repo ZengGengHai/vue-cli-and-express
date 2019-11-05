@@ -1,44 +1,47 @@
 <template>
-  <div class="blog_home">
-    <div v-for="(item,index) in blogLists" :key="index" >
+  <div class="blog-home">
+    <div class="blog-child">
+       <div v-for="(item,index) in blogLists" :key="index" >
         <el-card class="box-card" >
-          <el-row type="flex" justify="space-between">
-            <el-col :span="6"><div class="grid-content bg-purple">
+          <el-row type="flex" justify="space-between" align="middle">
+            <el-col :span="20" ><div class="grid-content bg-purple">
               
-              <span ><h1>{{item.title}}</h1> </span> <el-tag type="success" size="mini">web</el-tag> 
+              <span ><h2>{{item.title}}</h2> </span>  
             </div></el-col>
-            <el-col :span="2"></el-col>
+            <el-col :span="4">
+              <el-row  type="flex" justify="end"  > <el-tag type="success" size="mini">{{item.type}}</el-tag></el-row>
+            </el-col>
           </el-row>
 
 
 
 
-          <div style=""> 摘摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要要</div>
-
+          <p style="letter-spacing:1px;color:#333;">{{item.abstract}}</p>
+          <div><div  style="font-size:12px;color:green;font-weight:bloder;" @click="openContent(item.id)" ref="tip" >查看内容</div></div>
           <div ref="content" class="blog-content" v-html="item.content" ></div>
           
-          <div class="grid-content bg-purple-light"><div  @click="openContent(item.id)" ref="tip">展开</div></div>
-          <div style="margin-top:15px;">{{item.updatedAt}}</div>
+          <div style="margin-top:15px;color: #738a94;font-size:10px;">{{item.updatedAt}}</div>
         </el-card>
-    </div>
+     </div>
 
 
 
 
       <el-row type="flex" class="pagination" justify="end">
-          <el-col :span="20"><div  style="text-align:right">
+          <el-col :span="20"><div  style="text-align:end">
                   <el-pagination
                       class="pagination"
-                      layout="total, prev, pager, next,sizes,jumper" 
+                      layout="total, prev, pager, next" 
                       :page-size="pageSize"                    
                       :total="total"
-                      :page-sizes = [5,10,15,20]
+                      :page-sizes = [3,6,9]
                       :current-page.sync = "curPage"
                       @current-change = "changePage"
                       @size-change = "handleSizeChange">
                   </el-pagination>
           </div></el-col>
       </el-row>
+    </div>
   </div>
 </template>
 
@@ -76,7 +79,7 @@ export default {
             ],
             blogLists:[],
             //每页大小
-            pageSize:5,
+            pageSize:3,
             //当前页码
             curPage:1,
             //总条数
@@ -137,19 +140,25 @@ export default {
             console.log( this.$refs.content[index].style.height)
             if(this.$refs.content[index].style.height == "" || this.$refs.content[index].style.height == "0px" ){
                 this.$refs.content[index].style.height = "auto"
+                this.$refs.content[index].style.margin = "15px 0"
                 this.$refs.content[index].style.opacity = "1"
-                this.$refs.tip[index].innerText = "收起"
+                this.$refs.tip[index].innerText = "点击收起"
+                this.$refs.tip[index].style.color = "#ed3030"
             }else{
                 this.$refs.content[index].style.height = "0px"
                 this.$refs.content[index].style.opacity = "0"
-                this.$refs.tip[index].innerText = "展开"
+                this.$refs.tip[index].innerText = "查看内容"
+                this.$refs.content[index].style.margin = "0"
+                this.$refs.tip[index].style.color = "#005000"
             }
             
           
           }else{
             this.$refs.content[index].style.height = "0px"
             this.$refs.content[index].style.opacity = "0"
-            this.$refs.tip[index].innerText = "展开"
+            this.$refs.tip[index].innerText = "查看内容"
+            this.$refs.content[index].style.margin = "0"
+            this.$refs.tip[index].style.color = "#005000"
           }
         
       })
@@ -161,6 +170,8 @@ export default {
      this.$refs.content.forEach((element,i) => {
           this.$refs.content[i].style.height = "0px"
           this.$refs.content[i].style.opacity = "0"
+          this.$refs.content[i].style.margin = "0"
+          this.$refs.tip[i].style.color = "#005000"
      });
      this.getBlogList(curPage)
     },
@@ -169,6 +180,8 @@ export default {
       this.$refs.content.forEach((element,i) => {
           this.$refs.content[i].style.height = "0px"
           this.$refs.content[i].style.opacity = "0"
+          this.$refs.content[i].style.margin = "0"
+          this.$refs.tip[i].style.color = "#005000"
      });
       this.curPage = 1;
       this.pageSize = pageSize
@@ -192,44 +205,44 @@ export default {
   overflow: hidden;
   /* transition:height 0.3s ease 0.2s,opacity 0.2s ease ; */
 }
-
 .box-card{
-  margin-bottom: 30px;
+  margin: 30px 15px 20px;
 }
-
-
-.article-box{
-  width:100%;
-  background: #eee;
-  transition: 1s 0.5s height ease,0.5s opacity;
-}
-
-
- .blog_home {
+ .blog-home {
    font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
-
   /* text-align: center; */
   color: #2c3e50;
   margin-top: 0px;
+  height:100vh;
+  padding-top:0px;
+  overflow: hidden;
  
 }
-/* .ql-toolbar.ql-snow{
-    display: flex;
-    flex-wrap: wrap;
-} */
 
-
+.blog-child{
+  width:100%;
+  height: 100vh;
+  overflow-x: hidden; /*x轴禁止滚动*/
+  overflow-y: scroll;/*y轴滚动*/
+}
+.blog-child::-webkit-scrollbar {
+  display: none;
+}
 
  body{
   margin:0px;
   font-size: 14px;
+  
+  -ms-overflow-style: none; 
+  scrollbar-width: none;  
+ 
 }
 .site-content{
   padding-left:3vw;
   padding-right:3vw;
-  padding-top:80px;
+  /* padding-top:80px; */
 
 }
 @media only screen and (min-width:1001px){
@@ -237,8 +250,11 @@ export default {
     padding-left:300px;
     margin-left: 3.333em;
     padding-right:3.333em;
-    padding-top:3.333em;
-
+    /* padding-top:3.333em; */
+  }
+  .blog-child:first-child{
+     padding-top:3.3vh;
+     height:96.6vh;
   }
 }
 @media only screen and (min-width:801px) and (max-width:1001px){
@@ -246,18 +262,23 @@ export default {
     padding-left:30vw;
     margin-left: 2.333em;
     padding-right:2.333em;
-    padding-top:3.333em;
-
+    /* padding-top:3.333em; */
+  }
+  .blog-child:first-child{
+     padding-top:3.3vh;
+     height:96.6vh;
   }
 } 
 @media only screen and (max-width:800px){
   .site-content{
-    padding-top:8.533em;
+    /* padding-top:8.533em; */
+  }
+  .blog-child{
+     padding-top:8vh;
+     height:92vh;
   }
 }
 
-.blog-title{
 
-}
 
 </style>

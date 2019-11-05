@@ -11,10 +11,13 @@ const jwt = require('jsonwebtoken');
 // api总览
 router.get('/blog_table', function(req, res, next) {
     
+ 
 
     let result =[
     { label: "id", prop: "id", type: "normal",content:' ',show:false,data:'int'},
     { label: "标题", prop: "title", type: "normal" ,content:' ',show:true,data:'varChar'},
+    { label: "类别", prop: "type", type: "normal" ,content:' ',show:true,data:'varChar'},
+    { label: "摘要", prop: "abstract", type: "normal" ,content:' ',show:true,data:'varChar'},
     { label: "内容", prop: "content", type: "normal" ,content:' ' ,show:true,data:'varCharFwb'},
     { label: "创建时间", prop: "createdAt", type: "normal",content:'',show:true,data:'data'},
     { label: "更新时间", prop: "updatedAt", type: "normal",content:' ',show:true,data:'data'}]
@@ -121,11 +124,11 @@ router.get('/blog_list', function(req, res, next) {
 //创建数据项   POST   /api/blog_create  (title content)',
 router.post('/blog_create',function(req,res,next){  
    
-        let {title,content} = req.body
+        let {title,content,abstract,type} = req.body
         console.log(title)
-        if(title!=undefined  || content !=undefined ){
+        if(title!=undefined  || content !=undefined || abstract!=undefined  || type!=undefined ){
             console.log("ok")
-            db.Blog.create({title,content}).then(function(result){
+            db.Blog.create({title,content,abstract,type}).then(function(result){
                 if(result){
                     returnJSON(res,{
                         code:0,
@@ -186,7 +189,7 @@ router.post('/blog_delete',function(req,res,next){
 //更新数据项   POST:'/api/blog_update  (id title content)'
 router.post('/blog_update',function(req,res,next){  
 
-        let {id,title,content} = req.body
+        let {id,title,content,abstract,type} = req.body
         
         if(id ===  undefined){
             returnJSON(res,{
@@ -194,9 +197,8 @@ router.post('/blog_update',function(req,res,next){
                 msg:"Id参数必须写"
             })
          }
-         if(title !=undefined || content != undefined){
-             console.log("dd")
-            db.Blog.update({title,content}, {where: {id}}
+         if(title !=undefined || content != undefined || abstract !=undefined || type != undefined){
+            db.Blog.update({title,content,abstract,type}, {where: {id}}
                 ).then(function(result){
                 if(result){
                     returnJSON(res,{
@@ -219,6 +221,14 @@ router.post('/blog_update',function(req,res,next){
     
 });
 
+
+
+//文章图片
+router.post('/upload/singleFile',function(req,res,next){  
+
+    console.log(req,"img")
+
+});
 
 
 

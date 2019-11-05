@@ -80,18 +80,20 @@ export default {
 <style scoped>
     body{
         font-size: 10px;
+      
     }
     a{
         text-decoration:none;
     }
     .site-header{
-        background:#1d1d1d;
+        background:#000;
         color:#fff;
         height:100%;
         position:fixed;
         left:0;
         top:0;
         text-align: center;
+        z-index: 9999;
         /* box-shadow:0 2px 12px 0 rgba(0,0,0,.4) */
     }
     .profile img{

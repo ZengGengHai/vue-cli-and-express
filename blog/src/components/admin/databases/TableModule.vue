@@ -214,6 +214,15 @@
         </span>
       </el-dialog>
 
+       <el-upload
+        class="editor-upload"
+        accept="image/*"
+        action="http://127.0.0.1:3000/api/upload/singleFile"
+        :show-file-list="false"
+        :on-success="success"
+      ></el-upload>
+
+
 
   </div>
 </template>
@@ -305,7 +314,18 @@ export default {
         editorOption: {
               modules:{
                     toolbar:{
-                        container: toolbarOptions  // 工具栏
+                        container: toolbarOptions,  // 工具栏
+                        handlers: {
+                          image: function(value) {
+                            if (value) {
+                              console.log("aa")
+                              document.querySelector("input[name='file']").click();
+                            } else {
+                              this.quill.format("image", false);
+                            }
+                          }
+                        }
+
                    
                     }
                 }
@@ -608,6 +628,18 @@ export default {
 
      
     },
+
+    //富文本图片上传回调函数
+    success(res, file, fileList) {
+          console.log(res)
+          let quill = this.$refs.myQuillEditor.quill;
+          let range = quill.getSelection();
+            let length = range.index;
+            quill.insertEmbed(length, "image", res.data);
+            quill.setSelection(length + 1);
+        
+    },
+
 
 
     onEditorReady(editor) { // 准备编辑器

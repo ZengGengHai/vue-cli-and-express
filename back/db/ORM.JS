@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-
+const moment = require('moment')
 const sequelize = new Sequelize('my_db','root','server',{
     host:'localhost',
     dialect:'mysql',
@@ -30,7 +30,26 @@ const Blog = sequelize.define('blog',{
     },
     content:{
         type:Sequelize.STRING
+    },
+    abstract:{
+        type:Sequelize.STRING
+    },
+    type:{
+        type:Sequelize.STRING
+    },
+    createdAt: {
+        type: Sequelize.DATE,
+        get() {
+            return moment(this.getDataValue('createdAt')).format('YYYY-MM-DD HH:mm:ss');
+        }
+    },
+    updatedAt: {
+        type: Sequelize.DATE,
+        get() {
+            return moment(this.getDataValue('updatedAt')).format('YYYY-MM-DD HH:mm:ss');
+        }
     }
+
 },{
     // 自动维护时间戳 [ created_at、updated_at ]
     timestamps: true, 
