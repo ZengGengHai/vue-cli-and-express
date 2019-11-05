@@ -78,6 +78,9 @@ export default {
 </script>
 
 <style scoped>
+    body{
+        font-size: 10px;
+    }
     a{
         text-decoration:none;
     }
@@ -89,9 +92,10 @@ export default {
         left:0;
         top:0;
         text-align: center;
+        /* box-shadow:0 2px 12px 0 rgba(0,0,0,.4) */
     }
     .profile img{
-        width:100px;
+        width:90px;
         border:2px solid #d4a259;
         border-radius:50%;
     }
@@ -99,7 +103,7 @@ export default {
         padding-bottom:1.6em;
     }
     .site-identify h1{
-        font-size:30px;
+        font-size:22px;
         line-height: 1;
     }
     .site-identify p{
@@ -134,6 +138,9 @@ export default {
     .menu-item-select{
         color:#d4a259 !important;
     }
+
+
+
     @media only screen and (min-width:1001px){
         .site-header{
             width:300px;
@@ -142,8 +149,13 @@ export default {
             padding-left:30px;
             padding-right:30px;
             padding-bottom:3.333em;
-            padding-top:3.333em
+            padding-top:5.333em
         }
+           /* .site-header-wrap{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        } */
     }
     @media only screen and (min-width:801px) and (max-width:1001px){
         .site-header{
@@ -151,15 +163,20 @@ export default {
         }
         .site-header-inside{
             padding-bottom:3.3333em;
-            padding-top:3.3333em;
+            padding-top:5.3333em;
+            height:400px;
         }
+     
         
     }
     @media only screen and (max-width:800px){
         .site-header{
             width:100%;
             height:78px;
+            overflow-y: hidden;
+   
         }
+ 
         .profile img{
             width:50px;
         }
@@ -167,8 +184,8 @@ export default {
 
     .site-header-wrap{
         height:100%;
-        overflow:auto;
-        -webkit-overflow-scrolling:touch;
+        /* overflow:auto;
+        -webkit-overflow-scrolling:touch; */
  
     }
 

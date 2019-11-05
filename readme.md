@@ -236,6 +236,7 @@ npm install quill
 12.格式化时间 cnpm  i monent -S
 
 
-13. ...
+13. express安全登录，使用JSON WebToken
+cnpm i jsonwebtoken -S
 
 14. ...

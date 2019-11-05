@@ -8,7 +8,7 @@
         <el-col :span="5"><div >博客后台系统</div></el-col>
         <el-col :span="6"><div >
            <el-row  >
-            <el-col :span="10" style=""><div>{{adminName}}</div></el-col>
+            <!-- <el-col :span="10" style=""><div>{{adminName}}</div></el-col> -->
             <el-col :span="10"><div ><el-button type="primary"  @click="open" size="small" icon="el-icon-user-solid">退出登录</el-button></div></el-col>
           </el-row>
         </div>
@@ -83,12 +83,12 @@
 <script>
 export default {
   created() {
-   this.pushName();
+  //  this.pushName();
   },
   name: 'Home',
   data () {
     return {
-     adminName:'',
+    //  adminName:'',
      //导航栏的展开与收起
     isCollapse: false,
 
@@ -125,11 +125,11 @@ export default {
           });          
         });
       },
-      pushName(){
-        let admin =JSON.parse(localStorage.getItem('admin'))
-        let adminName = admin.username
-       this.adminName = adminName;
-      },
+      // pushName(){
+      //   let admin =JSON.parse(localStorage.getItem('admin'))
+      //   let adminName = admin.username
+      //  this.adminName = adminName;
+      // },
       changeMenu(){
         this.isCollapse = this.isCollapse ?  false : true;
       }

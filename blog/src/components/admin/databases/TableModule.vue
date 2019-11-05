@@ -329,7 +329,10 @@ export default {
 
           }
         }
+ 
         this.getDataList();
+      
+       
       },
 
       //获取表格式

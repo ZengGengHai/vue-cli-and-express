@@ -1,13 +1,17 @@
-var express = require('express');
-var router = express.Router();
-
+const express = require('express');
+const router = express.Router();
 const db = require('../db/ORM');
 
-console.log(db.Blog)
+//JSON WEBTOKEN
+const jwt = require('jsonwebtoken');
+
+
 /* GET article api. */
 
 // api总览
 router.get('/blog_table', function(req, res, next) {
+    
+
     let result =[
     { label: "id", prop: "id", type: "normal",content:' ',show:false,data:'int'},
     { label: "标题", prop: "title", type: "normal" ,content:' ',show:true,data:'varChar'},
@@ -64,9 +68,8 @@ router.get('/blog', function(req, res, next) {
 
 //查询列表  GET /api/blog_list?limit=10&offset=0 (limit为此次请求的数量,offset为偏移量)
 router.get('/blog_list', function(req, res, next) {
+    
     let {limit, offset} = req.query
-    console.log(limit,offset)
-  
     if(!isNaN(parseInt(limit)) && !isNaN(parseInt(offset))){
         db.Blog.findAndCountAll({
             limit:limit*1,

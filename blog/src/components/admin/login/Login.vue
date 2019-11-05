@@ -50,12 +50,13 @@
           if (valid) {     
               console.log('验证成功',this.ruleForm)
              
-            this.$axios.post('/admin',this.$qs.stringify(this.ruleForm)).then((res)=>{
+            this.$axios.post('/admin_login',this.$qs.stringify(this.ruleForm)).then((res)=>{
                 console.log(res)
                 let {data,status} = res
                 if(status === 200){
                     if(data.code === 0){
-                        localStorage.setItem('admin',JSON.stringify(data.data[0]))
+                        console.log(data)
+                        localStorage.setItem('token',data.token)
                         this.$router.push('/admin/databases/table/admin')
                     }else{
                         this.$message({

@@ -1,98 +1,230 @@
 <template>
- <div class="edit_container  blog_home">
-        <quill-editor 
-            v-model="content" 
-            ref="myQuillEditor" 
-            :options="editorOption" 
-            @blur="onEditorBlur($event)" @focus="onEditorFocus($event)"
-            @change="onEditorChange($event)">
-        </quill-editor>
-        <button v-on:click="saveHtml">保存</button>
-        
- </div>  
+  <div class="blog_home">
+    <div v-for="(item,index) in blogLists" :key="index" >
+        <el-card class="box-card" >
+          <el-row type="flex" justify="space-between">
+            <el-col :span="6"><div class="grid-content bg-purple">
+              
+              <span ><h1>{{item.title}}</h1> </span> <el-tag type="success" size="mini">web</el-tag> 
+            </div></el-col>
+            <el-col :span="2"></el-col>
+          </el-row>
+
+
+
+
+          <div style=""> 摘摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要摘要要</div>
+
+          <div ref="content" class="blog-content" v-html="item.content" ></div>
+          
+          <div class="grid-content bg-purple-light"><div  @click="openContent(item.id)" ref="tip">展开</div></div>
+          <div style="margin-top:15px;">{{item.updatedAt}}</div>
+        </el-card>
+    </div>
+
+
+
+
+      <el-row type="flex" class="pagination" justify="end">
+          <el-col :span="20"><div  style="text-align:right">
+                  <el-pagination
+                      class="pagination"
+                      layout="total, prev, pager, next,sizes,jumper" 
+                      :page-size="pageSize"                    
+                      :total="total"
+                      :page-sizes = [5,10,15,20]
+                      :current-page.sync = "curPage"
+                      @current-change = "changePage"
+                      @size-change = "handleSizeChange">
+                  </el-pagination>
+          </div></el-col>
+      </el-row>
+  </div>
 </template>
 
 <script>
 
-   const toolbarOptions = [
-      ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
-      ['blockquote', 'code-block'],
-    
-      [{'header': 1}, {'header': 2}],               // custom button values
-      [{'list': 'ordered'}, {'list': 'bullet'}],
-      [{'script': 'sub'}, {'script': 'super'}],      // superscript/subscript
-      [{'indent': '-1'}, {'indent': '+1'}],          // outdent/indent
-      [{'direction': 'rtl'}],                         // text direction
-    
-      [{'size': ['small', false, 'large', 'huge']}],  // custom dropdown
-      [{'header': [1, 2, 3, 4, 5, 6, false]}],
-    
-      [{'color': []}, {'background': []}],          // dropdown with defaults from theme
-      [{'font': []}],
-      [{'align': []}],
-      ['link', 'image', 'video'],
-      ['clean']                                         // remove formatting button
-    ]
 
 
 export default {
-    name:'Home',
+  name:'Home',
    data(){
      return {
-           serverUrl: '../file/upload',  // 这里写你要上传的图片服务器地址
-            content: `<p>hello world</p>`,
-            editorOption: {
-                  modules:{
-                        toolbar:{
-                            container: toolbarOptions,  // 工具栏
-                            // handlers: {
-                            //     'image': function (value) {
-                            //         if (value) {
-                            //             alert('自定义图片')
-                            //         } else {
-                            //             // this.quill.format('image', false); //禁止图片事件
-                            //         }
-                            //     }
-                            // }
-                        }
-                    }
-            }
-        }
+          
+            activeName: '0',
+            isOpenContent :false,
+            liheight:0,
+            article:[
+              {id:666,
+              title:"文章标题",
+              zhaiyao:"文章摘要文章摘要文章文章摘要文章摘要文章摘要文章文章摘要文章摘要文章摘要文章文章摘要文章摘要文章摘要文章文章摘要文章摘要文章摘要文章文章摘要文章摘要文章摘要文章文章摘要文章摘要文章摘要文章文章摘要文章摘要文章摘要文章文章摘要文章摘要文章摘要文章文章摘要文章摘要文章摘要文章文章摘要文章摘要文章摘要文章文章摘要文章摘要文章摘要文章文章摘要",
+              content:`<h1>dfdfff</h1> <p>这是段落</p>这是段落<p></p><p>这是段落</p>`,
+              time:'2019年11月4日10:25:51',
+              isOpenContent:false},
+              {id:636,
+              title:"文章标题",
+              zhaiyao:"文章摘要文章摘要文章文章摘要文章摘要文章摘要文章文章摘要文章摘要文章摘要文章文章摘要",
+              content:`<h1>dfdfff</h1>`,
+              time:'2019年11月4日10:25:51',
+              isOpenContent:false},
+              {id:626,
+              title:"文章标题",
+              zhaiyao:"文章摘要文章摘要文章文章摘要文章摘要文章摘要文章文章摘要文章摘要文章摘要文章文章摘要",
+              content:`<h1>dfdfff</h1>`,
+              time:'2019年11月4日10:25:51',
+              isOpenContent:false}
+            ],
+            blogLists:[],
+            //每页大小
+            pageSize:5,
+            //当前页码
+            curPage:1,
+            //总条数
+            total:0,
+          }
+
+  },
+  created() {
+    this.getBlogList();
+
+
   },
   computed: {
-        editor() {
-            return this.$refs.myQuillEditor.quill;
-        },
-    },
+    
+  },
+  mounted(){
+    //监听窗口大小变化
+      // window.onresize = () => {
+      //    return (() => {         
+      //    })()
+      //  }
+    
+    this.$nextTick(e => {
+      // this.article.map((item,index) =>{
+      //   item.isOpenContent = false;
+      // })
+      // console.log(this.article) 
+    });
+  },
+
   methods: {
-        onEditorReady(editor) { // 准备编辑器
-        },
-        onEditorBlur(){}, // 失去焦点事件
-        onEditorFocus(){}, // 获得焦点事件
-        onEditorChange(){}, // 内容改变事件
-        saveHtml:function(event){
-          console.log(this.content);
+
+    async getBlogList(curPage = 1){
+      console.log(curPage)
+      let res = await this.$axios.get('/blog_list',{params:{
+           offset:(curPage - 1)*this.pageSize,
+           limit:this.pageSize
+      }})
+      console.log(res)
+      if(res.status === 200){
+        if(res.data.code === 0){
+          let data = res.data.data
+          console.log(data)
+          this.total = data.count;
+          this.blogLists = data.list;
+
         }
-    }
+
+      }
+
+
+    },
+    openContent(id){
+      console.log(this.$refs.tip[0].innerText)
+      this.$refs.tip[0].innerText = "收起"
+      this.blogLists.map((item,index) =>{
+          if(id === item.id){
+            console.log( this.$refs.content[index].style.height)
+            if(this.$refs.content[index].style.height == "" || this.$refs.content[index].style.height == "0px" ){
+                this.$refs.content[index].style.height = "auto"
+                this.$refs.content[index].style.opacity = "1"
+                this.$refs.tip[index].innerText = "收起"
+            }else{
+                this.$refs.content[index].style.height = "0px"
+                this.$refs.content[index].style.opacity = "0"
+                this.$refs.tip[index].innerText = "展开"
+            }
+            
+          
+          }else{
+            this.$refs.content[index].style.height = "0px"
+            this.$refs.content[index].style.opacity = "0"
+            this.$refs.tip[index].innerText = "展开"
+          }
+        
+      })
+    },
+   
+    
+    //页面改变或者点击左右跳转页面
+    changePage(curPage){
+     this.$refs.content.forEach((element,i) => {
+          this.$refs.content[i].style.height = "0px"
+          this.$refs.content[i].style.opacity = "0"
+     });
+     this.getBlogList(curPage)
+    },
+    
+    handleSizeChange(pageSize){
+      this.$refs.content.forEach((element,i) => {
+          this.$refs.content[i].style.height = "0px"
+          this.$refs.content[i].style.opacity = "0"
+     });
+      this.curPage = 1;
+      this.pageSize = pageSize
+      this.getBlogList(this.curPage)
+    }, 
+      
+  }
 }
 </script>
 
 <style lang="">
- .blog_home {
-  /* font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px; */
-  background: red;
+/* 文章内容是否展开 */
+.pagination{
+  margin:30px 0 50px;
 }
-.ql-toolbar.ql-snow{
+
+
+.blog-content{
+  height:0px;
+  opacity:0;
+  overflow: hidden;
+  /* transition:height 0.3s ease 0.2s,opacity 0.2s ease ; */
+}
+
+.box-card{
+  margin-bottom: 30px;
+}
+
+
+.article-box{
+  width:100%;
+  background: #eee;
+  transition: 1s 0.5s height ease,0.5s opacity;
+}
+
+
+ .blog_home {
+   font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+
+  /* text-align: center; */
+  color: #2c3e50;
+  margin-top: 0px;
+ 
+}
+/* .ql-toolbar.ql-snow{
     display: flex;
     flex-wrap: wrap;
-}
+} */
+
+
+
  body{
   margin:0px;
+  font-size: 14px;
 }
 .site-content{
   padding-left:3vw;
@@ -102,7 +234,8 @@ export default {
 }
 @media only screen and (min-width:1001px){
   .site-content{
-    padding-left:320px;
+    padding-left:300px;
+    margin-left: 3.333em;
     padding-right:3.333em;
     padding-top:3.333em;
 
@@ -110,11 +243,21 @@ export default {
 }
 @media only screen and (min-width:801px) and (max-width:1001px){
   .site-content{
-    padding-left:32vw;
-    padding-right:3.333em;
+    padding-left:30vw;
+    margin-left: 2.333em;
+    padding-right:2.333em;
     padding-top:3.333em;
 
   }
 } 
+@media only screen and (max-width:800px){
+  .site-content{
+    padding-top:8.533em;
+  }
+}
+
+.blog-title{
+
+}
 
 </style>

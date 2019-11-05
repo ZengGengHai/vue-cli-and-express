@@ -1,7 +1,10 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
 const db = require('../db/ORM');
+
+//JSON WEBTOKEN
+const jwt = require('jsonwebtoken');
 
 /* GET article api. */
 
@@ -40,18 +43,28 @@ router.get('/admin_api', function(req, res, next) {
     })
 });
 
-//查找用户
-router.post('/admin',function(req,res,next){  
+//登录接口
+router.post('/admin_login',function(req,res,next){  
 
     let {username,password} = req.body
         if(username !=undefined || password != undefined){
             console.log("dd")
             db.Admin.findOne({where:{username,password},raw:true}).then((result) => {        
             if(isNaN(result)){
-                returnJSON(res,{
-                    code:0,
-                    data:[result]
+                // returnJSON(res,{
+                //     code:0,
+                //     data:result
+                // })
+                // console.log(result)
+                jwt.sign({user:result},'secrekey', { expiresIn: '2 days' },(err,token) => {
+               
+                    returnJSON(res,{
+                        code:0,
+                        token:token
+                    })
                 })
+
+
             }else{
                 returnJSON(res,{
                     code:-2,
@@ -75,7 +88,7 @@ router.post('/admin',function(req,res,next){
 //查询列表  GET /api/blog_list?limit=10&offset=0 (limit为此次请求的数量,offset为偏移量)
 router.get('/admin_list', function(req, res, next) {
     let {limit, offset} = req.query
-    console.log(limit,offset)
+    // console.log(limit,offset)
   
     if(!isNaN(parseInt(limit)) && !isNaN(parseInt(offset))){
         db.Admin.findAndCountAll({

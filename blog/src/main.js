@@ -25,24 +25,38 @@ axios.defaults.baseURL = "http://localhost:3000/api/"
 // axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8'
 //添加请求拦截器
 axios.interceptors.request.use(function (config) {
-  console.log('请求拦截器')
+  console.log('axios请求拦截器')
+  // console.log(config)
+  console.log(router.history.current.fullPath)
+  if(router.history.current.fullPath.indexOf('admin') >= 1){
+    console.log('后台页面发送的请求')
+    if(router.history.current.fullPath.indexOf('admin_login') >= 1){
+      console.log('登录页面')
+  
+    }else{
+      console.log('不是登录页面,fwt验证,请求是携带headers.Authorization.token')
+      config.headers.Authorization = localStorage.getItem('token')
+      console.log('headers携带验证信息')
+    }
+  }else{
+    console.log('来自前台页面请求')
+  }
+ 
+ 
   return config;
 })
 //响应拦截器
 axios.interceptors.response.use(function (response){
-  console.log('响应拦截器')
-  if(response.config.url.indexOf('admin') >= 0){
-    //给请求头中添加 Authorization 请求头
-   
-    let admin =JSON.parse(localStorage.getItem('admin')) 
-    if(admin==""||admin==null){
+  // console.log('axios响应拦截器',response)
+  // console.log(response)
+  if(response.status === 200){
+    if(response.data.code === -2 && response.data.msg === "token无效"){
+      console.log('token无效')
+      localStorage.removeItem('token')
       router.push("/admin/login")
-      console.log('未登录用户')
-    }else{
-      console.log('登录用户')
     }
-  }
 
+  }
   return response;
 })
 
@@ -54,6 +68,33 @@ Vue.prototype.$qs = Qs  //全局加载
 
 
 
+router.beforeEach((to, from, next) => {
+    
+      let goToPath = to.path
+      console.log(goToPath)
+
+      if(goToPath.indexOf('admin') >= 1){
+        if(goToPath.indexOf('login')>=1){
+          console.log('vue-router路由守卫使用:登录页面，暂时不需要验证身份')
+          next();
+        }else{
+          console.log('vue-router路由守卫使用:进入后台页面，需要验证身份，先进行简单的验证：是否有token')
+          if(localStorage.getItem('token')){
+            console.log("有token")
+          }else{
+            console.log('无token')
+          }
+          next();
+
+        }
+      }else{
+          console.log("vue-router路由守卫使用:非后台页面，不用验证身份")
+          next();
+      }
+      
+     
+   
+});
 
 
 
