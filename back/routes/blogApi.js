@@ -52,13 +52,13 @@ router.get('/blog_table', function(req, res, next) {
  
 
     let result =[
-    { label: "id", prop: "id", type: "normal",content:' ',show:false,data:'int'},
-    { label: "标题", prop: "title", type: "normal" ,content:' ',show:true,data:'varChar'},
-    { label: "类别", prop: "type", type: "normal" ,content:' ',show:true,data:'varChar'},
-    { label: "摘要", prop: "abstract", type: "normal" ,content:' ',show:true,data:'varChar'},
-    { label: "内容", prop: "content", type: "normal" ,content:' ' ,show:true,data:'varCharFwb'},
+    { label: "id", prop: "id", type: "normal",content:'',show:false,data:'int'},
+    { label: "标题", prop: "title", type: "normal" ,content:'',show:true,data:'varChar'},
+    { label: "类别", prop: "type", type: "normal" ,content:'',show:true,data:'varChar'},
+    { label: "摘要", prop: "abstract", type: "normal" ,content:'',show:true,data:'varChar'},
+    { label: "内容", prop: "content", type: "normal" ,content:'' ,show:true,data:'varCharFwb'},
     { label: "创建时间", prop: "createdAt", type: "normal",content:'',show:true,data:'data'},
-    { label: "更新时间", prop: "updatedAt", type: "normal",content:' ',show:true,data:'data'}]
+    { label: "更新时间", prop: "updatedAt", type: "normal",content:'',show:true,data:'data'}]
     returnJSON(res,{
         code:0,
         msg:'welcome to  use blog_table',
@@ -128,7 +128,8 @@ router.get('/blog_list', function(req, res, next) {
                         code:2,
                         data:[],
                         msg:'没有数据'
-                    })   
+                    }) 
+                    return   
                 }
                 //判断下一次查询是否会有数据
                 let hasMore = limit*1 + offset*1 < e.count ? true: false

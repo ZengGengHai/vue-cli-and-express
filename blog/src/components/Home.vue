@@ -18,7 +18,11 @@
 
           <p style="letter-spacing:1px;color:#333;">{{item.abstract}}</p>
           <div><div  style="font-size:12px;color:green;font-weight:bloder;cursor: pointer;" @click="openContent(item.id)" ref="tip" >查看内容</div></div>
-          <div ref="content" class="blog-content" v-html="item.content" ></div>
+          <div class="ql-container ql-snow blog-content " style="height:0px;border:0px;" ref="content"><div class="ql-editor" v-html="item.content" ></div></div>
+          <!-- <div class="ql-container ql-snow">
+    <div class="ql-editor" v-html="item.content">
+    </div>
+</div> -->
           
           <div style="margin-top:15px;color: #738a94;font-size:10px;">{{item.updatedAt}}</div>
         </el-card>
@@ -46,8 +50,6 @@
 </template>
 
 <script>
-
-
 
 export default {
   name:'Home',
@@ -154,11 +156,11 @@ export default {
             
           
           }else{
-            this.$refs.content[index].style.height = "0px"
-            this.$refs.content[index].style.opacity = "0"
-            this.$refs.tip[index].innerText = "查看内容"
-            this.$refs.content[index].style.margin = "0"
-            this.$refs.tip[index].style.color = "#005000"
+            // this.$refs.content[index].style.height = "0px"
+            // this.$refs.content[index].style.opacity = "0"
+            // this.$refs.tip[index].innerText = "查看内容"
+            // this.$refs.content[index].style.margin = "0"
+            // this.$refs.tip[index].style.color = "#005000"
           }
         
       })
@@ -172,6 +174,7 @@ export default {
           this.$refs.content[i].style.opacity = "0"
           this.$refs.content[i].style.margin = "0"
           this.$refs.tip[i].style.color = "#005000"
+          this.$refs.tip[i].innerText = "查看内容"
      });
      this.getBlogList(curPage)
     },
@@ -182,6 +185,7 @@ export default {
           this.$refs.content[i].style.opacity = "0"
           this.$refs.content[i].style.margin = "0"
           this.$refs.tip[i].style.color = "#005000"
+          this.$refs.tip[i].innerText = "查看内容"
      });
       this.curPage = 1;
       this.pageSize = pageSize
@@ -192,7 +196,12 @@ export default {
 }
 </script>
 
-<style lang="">
+<style >
+.ql-container.ql-snow{
+  border:0px;
+  /* height:0px; */
+}
+
 /* 文章内容是否展开 */
 .pagination{
   margin:30px 0 50px;

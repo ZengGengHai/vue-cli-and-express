@@ -20,9 +20,10 @@ const jwt = require('jsonwebtoken');
 
 
 const app = express();
-app.use(express.static('public/upload-single'));
 
 //访问静态支援
+app.use(express.static('public/upload-single'));
+
 
 
 // view engine setup
@@ -32,11 +33,11 @@ app.set('view engine', 'jade');
 
 //设置跨域请求
 app.all('*', function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
+  // res.header("Access-Control-Allow-Origin", "*");
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With');
   res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
   res.header("X-Powered-By", ' 3.2.1')
-  res.header("Content-Type", "application/json;charset=utf-8");
+  // res.header("Content-Type", "application/json;charset=utf-8");
   next();
 });
 
@@ -48,46 +49,55 @@ app.all('*', function (req, res, next) {
  * 拦截器
  */
 app.use(function (req, res, next) {
-  console.log(req.headers.referer)
-   
-  if(req.headers.referer.indexOf('admin') >= 1){
-    console.log('请求来自管理员页面,获取token,进行验证')
-    console.log(req.headers.referer.indexOf('login'))
-
-    //登录页面不需要验证
-    if(req.headers.referer.indexOf('login') >= 1){
-      console.log("ddd")
-       next();
-
-    //后台页面每次请求一次都要验证token是否有效
-    }else{
-      
-      if(req.headers.authorization){
-        console.log('有token')
-        jwt.verify(req.headers.authorization,'secrekey',(err,authData) => {
-          if(err){
-              console.log('验证不通过,token无效')
-              res.json({
-                code:-2,
-                msg:'token无效'
-            });
-          }else{
-              console.log('通过验证,token有效')
-              next();
-          }
-        });
-      }else{
-        next();
-      }
-
-
-    }
-
-  
-  }else{
-    console.log('请求来自前台页面')
-    next();
+  let time = Date.now(),
+  delta = Math.random() * 1000;
+  while(Date.now() < time + delta);
+  if(delta >900){
+      abc();
+      //throw new Error('error message');
   }
+  // console.log(req)
+  if(req.headers.referer) {
+    if(req.headers.referer.indexOf('admin') >= 1){
+      console.log('请求来自管理员页面,获取token,进行验证')
+      console.log(req.headers.referer.indexOf('login'))
+  
+      //登录页面不需要验证
+      if(req.headers.referer.indexOf('login') >= 1){
+        console.log("ddd")
+         next();
+      //后台页面每次请求一次都要验证token是否有效
+      }else{
+        
+        if(req.headers.authorization){
+          console.log('有token')
+          jwt.verify(req.headers.authorization,'secrekey',(err,authData) => {
+            if(err){
+                console.log('验证不通过,token无效')
+                res.json({
+                  code:-2,
+                  msg:'token无效'
+              });
+            }else{
+                console.log('通过验证,token有效')
+                next();
+            }
+          });
+        }else{
+          next();
+        }
+      }
+  
+    
+    }else{
+      console.log('请求来自前台页面')
+      next();
+    }
+  }else{
+    next();  
+  }
+
+ 
 
 
 

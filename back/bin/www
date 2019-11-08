@@ -12,22 +12,143 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
+// console.log(port)
 
 /**
  * Create HTTP server.
  */
 
-var server = http.createServer(app);
+//集群
+const cluster= require("cluster");
 
-/**
+const cpuNum =  require('os').cpus().length;
+
+
+
+
+
+
+
+//限制重启频率为61分钟20次数以内
+const limit = 20;
+const during = 60000;
+const restart = [];
+//控制重启频率
+const isTooFrequently = function (callback) {
+  let time = Date.now()
+  let length = restart.push(time)
+  // restart 数组永远只取最后限定条数
+  if (length > limit) {
+     restart.slice(-1 * limit)
+  }
+  // 最后的重启次数大于或等于限定次数且最后一次重启距离 limit 第一条的重启时间如果小于单位时间，则代表单位时间内重启太频繁了
+   restart.length >= limit && restart[restart.length - 1] - restart[0] < during
+  callback({
+    isToF:restart.length >= limit && restart[restart.length - 1] - restart[0] < during,
+    length,
+    num:restart.length
+  });
+}
+
+
+
+if(cluster.isMaster){
+  //记录工作进程
+  let workers = {}
+
+
+  console.log('宿主启动')
+
+  //window 主动设置轮叫调度
+  cluster.schedulingPolicy = cluster.SCHED_RR;
+
+  for(let i = 0; i < cpuNum; i++){
+    cluster.fork();
+  }
+  //工作进程销毁
+  cluster.on('exit',(worker,code) =>{
+    console.info(`worker[${worker.process.pid}] exited, 退出码：${code}`);
+    delete worker[worker.process.pid];
+  });
+
+  //监听工作进程
+  cluster.on('fork',(worker) => {
+      workers[worker.process.pid] = worker;
+      worker.on('message',(info) => {
+        
+          if(info.act === 'suicide') {
+              console.info(`worker[${worker.process.pid}] suicide `)
+              isTooFrequently(e =>{
+                console.log(e.isToF)
+                //重启过于频繁就停止重启
+                if(e.isToF){
+                    console.log(`重启过于频繁，停止创建线程,时间${e.length},频率${e.num}`);
+                    // console.log(worker.length)
+                }else{
+                  cluster.fork();
+                }
+              })
+          }
+      });
+      console.info(`worker[${worker.process.pid}] fork success`)
+  });
+
+ 
+  
+
+}else{
+
+  /**
  * Listen on provided port, on all network interfaces.
  */
+  let server = http.createServer(app);
 
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
+  //监听工作进程请求
+  server.listen(port);
+
+  //监听请求
+  server.on('request',(req, res) => {
+    //模拟随机报错，集群测试
+    // let time = Date.now(),
+    // delta = Math.random() * 1000;
+    // while(Date.now() < time + delta);
+    // if(delta >500){
+    //     abc();
+    //     //throw new Error('error message');
+    // }
+  
+  });
+
+  process.on("uncaughtException",(err) => {
+      console.log(`error:${err}`,"进程出错");
+
+      process.send({act: 'suicide'});
+      server.close(() => {
+          process.exit(1);
+      });
+      setTimeout(() => {
+          process.exit(1);
+      }, 10000);
+  });
+
+
+  server.on('listening', () =>{
+    let addr = server.address();
+    let bind = typeof addr === 'string'
+      ? 'pipe ' + addr
+      : 'port ' + addr.port;
+    debug('Listening on ' + bind);
+  });
+
+  server.on('error', onError);
+}
+
+
+
+
+
 
 /**
  * Normalize a port into a number, string, or false.
@@ -52,6 +173,7 @@ function normalizePort(val) {
 /**
  * Event listener for HTTP server "error" event.
  */
+
 
 function onError(error) {
   if (error.syscall !== 'listen') {
@@ -82,8 +204,9 @@ function onError(error) {
  */
 
 function onListening() {
-  var addr = server.address();
-  var bind = typeof addr === 'string'
+  let server = server
+  let addr = server.address();
+  let bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);

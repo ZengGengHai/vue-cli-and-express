@@ -44,6 +44,9 @@
                         <el-table-column
                         align="center"
                         label="操作"
+                        :width ='200'
+                        fixed="right"
+                        
                         >
                         <template slot-scope="scope">
                             <el-button @click="Edit(scope.row)" type="text" size="small">编辑</el-button>
@@ -377,6 +380,13 @@ export default {
        console.log(res)
        if(res.status === 200){
          let code = res.data.code
+         if(code === 2) {
+            this.dataLists =[],
+            this.total =0
+            setTimeout(()=>{
+                this.loading = false
+            },500)
+         }
          if(code === 0 ){
              let data = res.data.data
              this.dataLists = data.list,
@@ -471,6 +481,7 @@ export default {
 
       //删除数据
       Del(row){
+        
           console.log(row)
           let id = row.id
           let data = {
@@ -486,12 +497,18 @@ export default {
                       message:'删除成功',
                       duration:1000
                     })
+                    this.total= this.total-1;
                     const index = this.dataLists.findIndex(item => item.id === id)
                     this.dataLists.splice(index,1);
                     const totalPage = Math.ceil(this.dataLists.length / this.pageSize)
+
+                   
                 
                     if(totalPage === 0 && this.curPage != 1){
                         this.getDataList(--this.curPage);
+
+                    }else if(this.total === this.pageSize){
+                        this.getDataList(1);
                     }
 
                 }else{
@@ -708,18 +725,11 @@ export default {
 
 
 /* 富文本样式 */
-/* .fwbBox{
-  height: 450px;
-  overflow-y: hidden;
-} */
+
 .ql-toolbar.ql-snow{
     display: flex;
     flex-wrap: wrap;
 }
 
-/* .ql-editor{
-  cursor: text;
-  height: 900px;
-  overflow-y: hidden;
-} */
+
 </style>

@@ -56,7 +56,9 @@ const router = new Router({
         main:Article
       }
     },
-    // 后台页面
+    //后台页面
+  
+   
     {
       path: '/admin',
       name: 'admin',
@@ -74,6 +76,7 @@ const router = new Router({
     
       ]
     },
+
     // 后台登录页面
     {
       path: '/admin/login',

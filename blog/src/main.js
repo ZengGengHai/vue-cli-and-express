@@ -21,8 +21,11 @@ Vue.use(VueQuillEditor)
 //axios
 import axios from "axios"
 Vue.prototype.$axios = axios
+
+
+// axios.defaults.headers['Content-Type']='application/x-www-form-urlencoded'
 axios.defaults.baseURL = "http://localhost:3000/api/"
-// axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8'
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8'
 //添加请求拦截器
 axios.interceptors.request.use(function (config) {
   console.log('axios请求拦截器')

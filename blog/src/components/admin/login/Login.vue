@@ -58,6 +58,7 @@
                         console.log(data)
                         localStorage.setItem('token',data.token)
                         this.$router.push('/admin/databases/table/admin')
+      
                     }else{
                         this.$message({
                             showClose: true,

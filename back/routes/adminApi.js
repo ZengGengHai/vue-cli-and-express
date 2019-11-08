@@ -12,8 +12,8 @@ const jwt = require('jsonwebtoken');
 router.get('/admin_table', function(req, res, next) {
     let result =[
     { label: "id", prop: "id", type: "normal" ,content:'',show:false,data:'int'},
-    { label: "账号", prop: "username", type: "normal",content:' ',show:true,data:'varchar' },
-    { label: "密码", prop: "password", type: "normal",content:' ',show:true,data:'varchar' },
+    { label: "账号", prop: "username", type: "normal",content:'',show:true,data:'varchar' },
+    { label: "密码", prop: "password", type: "normal",content:'',show:true,data:'varchar' },
     { label: "创建时间", prop: "createdAt", type: "normal" ,content:'',show:true,data:'data'},
     { label: "更新时间", prop: "createdAt", type: "normal" ,content:'',show:true,data:'data'}]
 
@@ -100,7 +100,14 @@ router.get('/admin_list', function(req, res, next) {
             where:{}
         }).then((e) => { 
             if(isNaN(e.rows)){
-                console.log(e)
+                if(e.count === 0){
+                    returnJSON(res,{
+                        code:2,
+                        data:[],
+                        msg:'没有数据'
+                    }) 
+                    return   
+                }
                 //判断下一次查询是否会有数据
                 let hasMore = limit*1 + offset*1 < e.count ? true: false
                 let result = {

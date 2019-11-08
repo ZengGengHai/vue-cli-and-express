@@ -7,9 +7,9 @@
         <el-col :span="6"><div ></div>vue-cli+node-express</el-col>
         <el-col :span="5"><div >博客后台系统</div></el-col>
         <el-col :span="6"><div >
-           <el-row  >
+           <el-row type="flex" justify="center" >
             <!-- <el-col :span="10" style=""><div>{{adminName}}</div></el-col> -->
-            <el-col :span="10"><div ><el-button type="primary"  @click="open" size="small" icon="el-icon-user-solid">退出登录</el-button></div></el-col>
+            <el-col :span="4"><div  ><el-button type="primary"  @click="open" size="small" icon="el-icon-user-solid" >退出登录</el-button></div></el-col>
           </el-row>
         </div>
          
@@ -84,6 +84,7 @@
 export default {
   created() {
   //  this.pushName();
+     this.$router.push('/admin/databases/table/admin')
   },
   name: 'Home',
   data () {
@@ -92,11 +93,10 @@ export default {
      //导航栏的展开与收起
     isCollapse: false,
 
-    
-
     }
   },
   methods:{
+    
       handleOpen(key, keyPath) {
         console.log(key, keyPath);
       },
