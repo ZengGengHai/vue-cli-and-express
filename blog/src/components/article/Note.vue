@@ -22,7 +22,7 @@ export default {
     
     },
     mounted(){
-        this.$axios.get('http://localhost:3000/note/getNoteList')
+        this.$axios.get('/note/getNoteList')
         .then((res) =>{
           this.noteList = res.data         
         })

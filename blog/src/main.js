@@ -24,7 +24,7 @@ Vue.prototype.$axios = axios
 
 
 // axios.defaults.headers['Content-Type']='application/x-www-form-urlencoded'
-axios.defaults.baseURL = "http://localhost:3000/api/"
+axios.defaults.baseURL = "https://blog.zenggenghai.cn/api/"
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8'
 //添加请求拦截器
 axios.interceptors.request.use(function (config) {

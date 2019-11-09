@@ -1,6 +1,8 @@
 <template>
-    <div>
-        about
+    <div   class="blog-home">
+        <div class="blog-child">
+         关于本人页面
+        </div>
     </div>
 </template>
 
@@ -17,3 +19,7 @@ export default {
     }
 }
 </script>
+
+<style lang="">
+    
+</style>

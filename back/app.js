@@ -33,7 +33,7 @@ app.set('view engine', 'jade');
 
 //设置跨域请求
 app.all('*', function (req, res, next) {
-  // res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Origin", "*");
   res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With');
   res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
   res.header("X-Powered-By", ' 3.2.1')
@@ -49,13 +49,7 @@ app.all('*', function (req, res, next) {
  * 拦截器
  */
 app.use(function (req, res, next) {
-  let time = Date.now(),
-  delta = Math.random() * 1000;
-  while(Date.now() < time + delta);
-  if(delta >900){
-      abc();
-      //throw new Error('error message');
-  }
+  
   // console.log(req)
   if(req.headers.referer) {
     if(req.headers.referer.indexOf('admin') >= 1){
@@ -135,7 +129,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/note',noteRouter);
+app.use('/api/note',noteRouter);
 app.use('/api/',blogRouter);
 app.use('/api/',adminRouter);
 

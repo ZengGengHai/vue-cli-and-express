@@ -5,7 +5,8 @@
                 <div class="site-branding">
                     <p class="profile">
                         <router-link to="/index">
-                            <img src="../assets/logo.png" alt="">  
+                            <img src="https://blog.zenggenghai.cn/public/static/img/logo.ff0996c.png" alt="">
+                           <!-- <div class="img" style="margin:0 auto;width:100px;height:100px;background:url('https://blog.zenggenghai.cn/public/static/img/logo.ff0996c.png') center center repeat-x"></div>   -->
                         </router-link>
                     </p>
                     <div class="site-identify">
@@ -54,26 +55,43 @@ export default {
     methods:{
         tabClass(index){
             this.itemCheck = index;
+        },
+        fetchData(){
+           console.log('路由发送变化doing...');
         }
     },
-    created(){
-    
-    
-        if(this.$route.name === "article"){
-             this.itemCheck = 2;
-        }
-        if(this.$route.name === "node"){
+    created(){ 
+        // if(this.$route.name === "article"){
+        //     this.itemCheck = 2;
+        // }else if( this.$route.name === "about"){
+        //     this.itemCheck = 1
+        // }else{
+        //     this.itemCheck = 0;
+        // }
+   
                 this.list.forEach((element,index) => {
-                    for(let i in element){    
-                        if(element[i].indexOf(this.$route.name) >= 0){
-                        
+                
+                        let reg = '^[^/]*\/';
+                        let res = this.$route.name.replace(reg,''); 
+                        console.log(res) 
+                        console.log(element.title)
+                        if(element.title == res){  
                             this.itemCheck = index;
-                        }
-                    }
+                        } 
+                        if(res == "article"){
+                            this.itemCheck =2;
+                        }  
                 });
-        }
+        
      
-    }
+    },
+    watch:{
+      '$route':'fetchData'
+    },
+
+
+
+
 }
 </script>
 

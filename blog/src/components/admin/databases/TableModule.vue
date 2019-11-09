@@ -219,7 +219,7 @@
        <el-upload
         class="editor-upload"
         accept="image/*"
-        action="http://127.0.0.1:3000/api/upload/singleFile"
+        action="https://blog.zenggenghai.cn/api/upload/singleFile"
         :show-file-list="false"
         :on-success="success"
       ></el-upload>

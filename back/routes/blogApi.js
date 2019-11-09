@@ -35,7 +35,7 @@ router.post('/upload/singleFile',upload.single('file'),function(req,res,next){
 
     //给客户端返回图片的访问地址 域名 + 文件名字 
     //因为在 app.js文件里面我们已经向外暴漏了存储图片的文件夹 uploa
-    const url = 'http://localhost:3000/' + req.file.filename
+    const url = 'https://blog.zenggenghai.cn/upload-single/' + req.file.filename
     res.json({url})
 
 });
