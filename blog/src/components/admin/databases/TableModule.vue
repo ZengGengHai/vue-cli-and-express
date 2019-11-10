@@ -541,7 +541,7 @@ export default {
                 this.getDataList()
                 this.$message({
                     type:'success',
-                    message:'修改成功',
+                    message:'添加成功',
                     duration:1000
                   })
             }
@@ -549,7 +549,7 @@ export default {
           }else{
               this.$message({
                 type:'error',
-                message:'修改失败',
+                message:'添加失败',
                 duration:1000
               })
           }

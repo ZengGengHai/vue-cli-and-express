@@ -3,7 +3,7 @@
  
     <router-view name="header"/>
     <router-view name="main" class="site-content"/>
-     <router-view name="admin"/>
+    <router-view name="admin"/>
   
   </div>
 </template>

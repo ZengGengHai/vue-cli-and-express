@@ -22,8 +22,11 @@ const jwt = require('jsonwebtoken');
 const app = express();
 
 //访问静态支援
-app.use(express.static('public/upload-single'));
 
+
+/**
+ * app.use(express.static('public/upload-single'));
+ */
 
 
 // view engine setup
@@ -49,8 +52,7 @@ app.all('*', function (req, res, next) {
  * 拦截器
  */
 app.use(function (req, res, next) {
-  
-  // console.log(req)
+   
   if(req.headers.referer) {
     if(req.headers.referer.indexOf('admin') >= 1){
       console.log('请求来自管理员页面,获取token,进行验证')

@@ -59,16 +59,10 @@
             </el-col>   
           </el-row>
 <el-row class="btn" type="flex" justify="end"  :class="[ isCollapse?'smallWidth':'bigWidth']" >
-  <!-- <el-col style="width:50px;" ><div>
-    <el-radio-group v-model="isCollapse"  >
-    <el-radio :label="false" type="text" size="mini"  v-show="isCollapse"  class="showbox">  k</el-radio>
-    <el-radio :label="true" type="text" size="mini"  v-show="!isCollapse" class="showbox">   <i class="el-icon-setting"></i></el-radio>
-  </el-radio-group>
-  </div></el-col> -->
+
    <i v-if="isCollapse" class="el-icon-d-arrow-right show-menu" @click='changeMenu'></i>
    <i v-if="!isCollapse" class="el-icon-d-arrow-left show-menu" @click='changeMenu'></i>
 </el-row>
-
 
         </el-aside>
   
@@ -125,11 +119,7 @@ export default {
           });          
         });
       },
-      // pushName(){
-      //   let admin =JSON.parse(localStorage.getItem('admin'))
-      //   let adminName = admin.username
-      //  this.adminName = adminName;
-      // },
+
       changeMenu(){
         this.isCollapse = this.isCollapse ?  false : true;
       }
@@ -185,14 +175,10 @@ export default {
 }
 .el-menu{
   /* border:1px solid red; */
-
-}
-  
+}  
 .el-main {
     background-color: #E9EEF3;
-    color: #333;
-   
-   
+    color: #333;  
     /* min-width: 800px;
     overflow: hidden; */
 
@@ -203,35 +189,23 @@ export default {
   left: 0;
   bottom: 0;
   background: #fff;
-
 }
-
 .bigWidth{
   width:130px;
   transition:ease-in-out width 0.3s;
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 }
-
 .smallWidth{
   width:65px;
   transition:ease-in-out  width 0.3s;
   box-shadow:0 2px 12px 0 rgba(0, 0, 0, 0.1);
 }
-
-
   .show-menu{
     padding:10px;
   }
-
-
-
   .el-menu-vertical-demo:not(.el-menu--collapse) {
     /* width: 200px;
     min-height: 400px; */
     /* margin-right: 20px; */
-
   }
-
-  
-
 </style>

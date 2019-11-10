@@ -1,5 +1,7 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+// import Vue from 'vue'
+// import Router from 'vue-router'
+
+
 
 import Header from "@/components/Header"
 import Home from "@/components/Home"
@@ -15,9 +17,9 @@ import  TableModule from "@/components/admin/databases/TableModule"
 
 import Statistics from "@/components/admin/statistics/Statistics"
 
-Vue.use(Router)
+// Vue.use(Router)
 
-const router = new Router({
+const router = new VueRouter({
   mode: 'history',
   routes: [
     {
@@ -92,10 +94,10 @@ const router = new Router({
 })
 
 //防止重复点击两次
-const originalPush = Router.prototype.push
-Router.prototype.push = function push (location){
-  return originalPush.call(this,location).catch(err=>err)
-}
+// const originalPush = VueRouter.prototype.push
+// VueRouter.prototype.push = function push (location){
+//   return originalPush.call(this,location).catch(err=>err)
+// }
 
 
 

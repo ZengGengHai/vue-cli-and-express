@@ -5,7 +5,7 @@
                 <div class="site-branding">
                     <p class="profile">
                         <router-link to="/index">
-                            <img src="https://blog.zenggenghai.cn/public/static/img/logo.ff0996c.png" alt="">
+                            <img src="../assets/logo.png" alt="">
                            <!-- <div class="img" style="margin:0 auto;width:100px;height:100px;background:url('https://blog.zenggenghai.cn/public/static/img/logo.ff0996c.png') center center repeat-x"></div>   -->
                         </router-link>
                     </p>
@@ -86,7 +86,7 @@ export default {
      
     },
     watch:{
-      '$route':'fetchData'
+     
     },
 
 

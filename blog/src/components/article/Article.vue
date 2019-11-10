@@ -10,9 +10,9 @@
 
 <script>
 // import marked from 'marked'
-import hljs from "highlight.js";
+// import hljs from "highlight.js";
 // import javascript from 'highlight.js/lib/languages/javascript';
-import 'highlight.js/styles/atelier-forest-dark.css';
+// import 'highlight.js/styles/atelier-forest-dark.css';
 
 export default {
     name:'Article',

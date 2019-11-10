@@ -1,25 +1,26 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue'
+
 import App from './App'
 import router from './router'
 
 //ElementUI
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+//  import ElementUI from 'element-ui';
+// import 'element-ui/lib/theme-chalk/index.css';
+// Vue.use(ElementUI);
 
 
 //富文本的使用
 import VueQuillEditor from 'vue-quill-editor'
-import 'quill/dist/quill.core.css'
+// import 'quill/dist/quill.core.css'
 import 'quill/dist/quill.snow.css'
-import 'quill/dist/quill.bubble.css'
+// import 'quill/dist/quill.bubble.css'
 Vue.use(VueQuillEditor)
 
 
 
 //axios
-import axios from "axios"
+// import axios from "axios"
 Vue.prototype.$axios = axios
 
 
@@ -66,7 +67,7 @@ axios.interceptors.response.use(function (response){
 
 
 //引用qs使axios的post对象序列化
-import Qs from 'qs'   //引入方式
+// import Qs from 'qs'   //引入方式
 Vue.prototype.$qs = Qs  //全局加载
 
 
@@ -101,7 +102,7 @@ router.beforeEach((to, from, next) => {
 
 
 
-Vue.use(ElementUI);
+
 
 
 
@@ -115,3 +116,14 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+
+
+
+// "axios": "^0.19.0",
+// "element-ui": "^2.12.0",
+// "highlight.js": "^9.15.10",
+// "marked": "^0.7.0",
+// "vue": "^2.5.2",
+// "vue-quill-editor": "^3.0.6",
+// "vue-router": "^3.0.1"
