@@ -42,3 +42,6 @@
 ::ffff:127.0.0.1 2019-11-11 14:27:54 /favicon.ico http://127.0.0.1:3000/about GET Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36
 ::ffff:127.0.0.1 2019-11-11 14:27:56 /favicon.ico http://127.0.0.1:3000/note GET Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36
 ::ffff:127.0.0.1 2019-11-11 14:27:58 /favicon.ico http://127.0.0.1:3000/article/day3 GET Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36
+::1 2019-11-11 16:10:28 / undefined GET Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36
+::1 2019-11-11 16:10:28 /index undefined GET Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36
+::1 2019-11-11 16:10:28 /favicon.ico http://localhost:3000/index GET Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36

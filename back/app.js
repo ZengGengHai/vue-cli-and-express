@@ -35,7 +35,10 @@ const accessLogStream = rfs('access.log', {
 const StatisticsLog = fs.createWriteStream('log/statistics.log', {flags: 'a'})
 const statistics = (req,res,next) =>{
   //访问日记
-  let user_ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+  let user_ip = req.headers['x-forwarded-for'] ||
+  req.connection.remoteAddress ||
+  req.socket.remoteAddress ||
+  req.connection.socket.remoteAddress;;
   let time = moment(new Date()).format(('YYYY-MM-DD HH:mm:ss'));
   if(req.url.indexOf('static')<0){
     let content = user_ip+' '+time+' '+req.url+' '+req.headers['referer']+' '+req.method+' '+req.headers['user-agent'];
