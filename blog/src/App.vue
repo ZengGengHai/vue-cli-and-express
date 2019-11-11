@@ -1,6 +1,5 @@
 <template>
   <div id="app">
- 
     <router-view name="header"/>
     <router-view name="main" class="site-content"/>
     <router-view name="admin"/>

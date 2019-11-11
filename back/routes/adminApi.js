@@ -49,7 +49,8 @@ router.post('/admin_login',function(req,res,next){
     let {username,password} = req.body
         if(username !=undefined || password != undefined){
             console.log("dd")
-            db.Admin.findOne({where:{username,password},raw:true}).then((result) => {        
+            db.Admin.findOne({where:{username,password},raw:true}).then((result) => {  
+                console.log(result)      
             if(isNaN(result)){
                 // returnJSON(res,{
                 //     code:0,

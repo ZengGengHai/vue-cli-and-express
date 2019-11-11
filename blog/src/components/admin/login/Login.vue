@@ -27,9 +27,8 @@
     data() {
       return {
         ruleForm: {
-          username: 'zgh',
-          password:'zghzzj'
-  
+          username:'',
+          password:''
         },
         rules: {
            username: [
@@ -51,7 +50,7 @@
               console.log('验证成功',this.ruleForm)
              
             this.$axios.post('/admin_login',this.$qs.stringify(this.ruleForm)).then((res)=>{
-                console.log(res)
+               
                 let {data,status} = res
                 if(status === 200){
                     if(data.code === 0){

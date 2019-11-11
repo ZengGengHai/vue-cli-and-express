@@ -224,19 +224,36 @@ http://localhost:8080/index
 
 9. 使用vue-quill-editor富文本编辑器
 
-npm install vue-quill-editor
-再安装依赖项
-npm install quill
+    安装：npm i vue-quill-editor
+    再安装依赖项
+    npm install quill -S
+
+      
 10. 编写接口
+    npm i sequlize -S
+    npm i mysql2 -S
 
-
+     
 11. axios 中 post请求 qs进行序列化
-  npm i qs
-
-12.格式化时间 cnpm  i monent -S
+    npm i qs -S
 
 
-13. express安全登录，使用JSON WebToken
-cnpm i jsonwebtoken -S
 
-14. 使用文件上传中间件 multer 处理文件上传
+
+12. 格式化时间 
+    npm  i monent -S
+
+
+
+13. express安全登录，使用JSON WebToken 
+    npm i jsonwebtoken -S
+
+
+14. 使用文件上传中间件 multer 处理文件上传 
+    npm i multer -S
+
+15. 邮箱通知告警信息 
+    npm i nodemailer -S
+
+16. 使用express 日记组件morgan
+    npm i express morgan -S

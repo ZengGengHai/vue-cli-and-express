@@ -1,0 +1,506 @@
+[Mon Nov 11 2019 13:30:00 GMT+0800 (GMT+08:00)] /favicon.ico
+NotFoundError: Not Found
+    at e:\bilibili-vue+node-blog\bilibili\back\app.js:170:8
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:635:15
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:260:14)
+    at Function.handle (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:174:3)
+    at router (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_serve-static@1.14.1@serve-static\index.js:121:7)
+    at SendStream.emit (events.js:182:13)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:270:17)
+    at SendStream.onStatError (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:421:12)
+    at onstat (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:726:26)
+    at FSReqWrap.oncomplete (fs.js:154:21)
+[Mon Nov 11 2019 13:30:00 GMT+0800 (GMT+08:00)] /favicon.ico
+NotFoundError: Not Found
+    at e:\bilibili-vue+node-blog\bilibili\back\app.js:170:8
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:635:15
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:260:14)
+    at Function.handle (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:174:3)
+    at router (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_serve-static@1.14.1@serve-static\index.js:121:7)
+    at SendStream.emit (events.js:182:13)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:270:17)
+    at SendStream.onStatError (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:421:12)
+    at onstat (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:726:26)
+    at FSReqWrap.oncomplete (fs.js:154:21)
+[Mon Nov 11 2019 13:30:07 GMT+0800 (GMT+08:00)] /favicon.ico
+NotFoundError: Not Found
+    at e:\bilibili-vue+node-blog\bilibili\back\app.js:170:8
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:635:15
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:260:14)
+    at Function.handle (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:174:3)
+    at router (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_serve-static@1.14.1@serve-static\index.js:121:7)
+    at SendStream.emit (events.js:182:13)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:270:17)
+    at SendStream.onStatError (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:421:12)
+    at onstat (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:726:26)
+    at FSReqWrap.oncomplete (fs.js:154:21)
+[Mon Nov 11 2019 13:30:09 GMT+0800 (GMT+08:00)] /favicon.ico
+NotFoundError: Not Found
+    at e:\bilibili-vue+node-blog\bilibili\back\app.js:170:8
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:635:15
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:260:14)
+    at Function.handle (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:174:3)
+    at router (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_serve-static@1.14.1@serve-static\index.js:121:7)
+    at SendStream.emit (events.js:182:13)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:270:17)
+    at SendStream.onStatError (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:421:12)
+    at onstat (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:726:26)
+    at FSReqWrap.oncomplete (fs.js:154:21)
+[Mon Nov 11 2019 13:30:09 GMT+0800 (GMT+08:00)] /favicon.ico
+NotFoundError: Not Found
+    at e:\bilibili-vue+node-blog\bilibili\back\app.js:170:8
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:635:15
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:260:14)
+    at Function.handle (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:174:3)
+    at router (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_serve-static@1.14.1@serve-static\index.js:121:7)
+    at SendStream.emit (events.js:182:13)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:270:17)
+    at SendStream.onStatError (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:421:12)
+    at onstat (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:726:26)
+    at FSReqWrap.oncomplete (fs.js:154:21)
+[Mon Nov 11 2019 13:30:11 GMT+0800 (GMT+08:00)] /favicon.ico
+NotFoundError: Not Found
+    at e:\bilibili-vue+node-blog\bilibili\back\app.js:170:8
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:635:15
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:260:14)
+    at Function.handle (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:174:3)
+    at router (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_serve-static@1.14.1@serve-static\index.js:121:7)
+    at SendStream.emit (events.js:182:13)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:270:17)
+    at SendStream.onStatError (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:421:12)
+    at onstat (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:726:26)
+    at FSReqWrap.oncomplete (fs.js:154:21)
+[Mon Nov 11 2019 13:30:12 GMT+0800 (GMT+08:00)] /favicon.ico
+NotFoundError: Not Found
+    at e:\bilibili-vue+node-blog\bilibili\back\app.js:170:8
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:635:15
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:260:14)
+    at Function.handle (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:174:3)
+    at router (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_serve-static@1.14.1@serve-static\index.js:121:7)
+    at SendStream.emit (events.js:182:13)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:270:17)
+    at SendStream.onStatError (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:421:12)
+    at onstat (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:726:26)
+    at FSReqWrap.oncomplete (fs.js:154:21)
+[Mon Nov 11 2019 13:30:13 GMT+0800 (GMT+08:00)] /favicon.ico
+NotFoundError: Not Found
+    at e:\bilibili-vue+node-blog\bilibili\back\app.js:170:8
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:635:15
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:260:14)
+    at Function.handle (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:174:3)
+    at router (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_serve-static@1.14.1@serve-static\index.js:121:7)
+    at SendStream.emit (events.js:182:13)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:270:17)
+    at SendStream.onStatError (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:421:12)
+    at onstat (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:726:26)
+    at FSReqWrap.oncomplete (fs.js:154:21)
+[Mon Nov 11 2019 13:31:39 GMT+0800 (GMT+08:00)] /favicon.ico
+NotFoundError: Not Found
+    at e:\bilibili-vue+node-blog\bilibili\back\app.js:170:8
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:635:15
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:260:14)
+    at Function.handle (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:174:3)
+    at router (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_serve-static@1.14.1@serve-static\index.js:121:7)
+    at SendStream.emit (events.js:182:13)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:270:17)
+    at SendStream.onStatError (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:421:12)
+    at onstat (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:726:26)
+    at FSReqWrap.oncomplete (fs.js:154:21)
+[Mon Nov 11 2019 14:11:24 GMT+0800 (GMT+08:00)] /favicon.ico
+NotFoundError: Not Found
+    at e:\bilibili-vue+node-blog\bilibili\back\app.js:170:8
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:635:15
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:260:14)
+    at Function.handle (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:174:3)
+    at router (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_serve-static@1.14.1@serve-static\index.js:121:7)
+    at SendStream.emit (events.js:182:13)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:270:17)
+    at SendStream.onStatError (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:421:12)
+    at onstat (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:726:26)
+    at FSReqWrap.oncomplete (fs.js:154:21)
+[Mon Nov 11 2019 14:11:26 GMT+0800 (GMT+08:00)] /favicon.ico
+NotFoundError: Not Found
+    at e:\bilibili-vue+node-blog\bilibili\back\app.js:170:8
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:635:15
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:260:14)
+    at Function.handle (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:174:3)
+    at router (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_serve-static@1.14.1@serve-static\index.js:121:7)
+    at SendStream.emit (events.js:182:13)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:270:17)
+    at SendStream.onStatError (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:421:12)
+    at onstat (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:726:26)
+    at FSReqWrap.oncomplete (fs.js:154:21)
+[Mon Nov 11 2019 14:11:26 GMT+0800 (GMT+08:00)] /favicon.ico
+NotFoundError: Not Found
+    at e:\bilibili-vue+node-blog\bilibili\back\app.js:170:8
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:635:15
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:260:14)
+    at Function.handle (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:174:3)
+    at router (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_serve-static@1.14.1@serve-static\index.js:121:7)
+    at SendStream.emit (events.js:182:13)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:270:17)
+    at SendStream.onStatError (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:421:12)
+    at onstat (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:726:26)
+    at FSReqWrap.oncomplete (fs.js:154:21)
+[Mon Nov 11 2019 14:11:31 GMT+0800 (GMT+08:00)] /favicon.ico
+NotFoundError: Not Found
+    at e:\bilibili-vue+node-blog\bilibili\back\app.js:170:8
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:635:15
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:260:14)
+    at Function.handle (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:174:3)
+    at router (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_serve-static@1.14.1@serve-static\index.js:121:7)
+    at SendStream.emit (events.js:182:13)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:270:17)
+    at SendStream.onStatError (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:421:12)
+    at onstat (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:726:26)
+    at FSReqWrap.oncomplete (fs.js:154:21)
+[Mon Nov 11 2019 14:11:39 GMT+0800 (GMT+08:00)] /favicon.ico
+NotFoundError: Not Found
+    at e:\bilibili-vue+node-blog\bilibili\back\app.js:170:8
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:635:15
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:260:14)
+    at Function.handle (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:174:3)
+    at router (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_serve-static@1.14.1@serve-static\index.js:121:7)
+    at SendStream.emit (events.js:182:13)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:270:17)
+    at SendStream.onStatError (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:421:12)
+    at onstat (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:726:26)
+    at FSReqWrap.oncomplete (fs.js:154:21)
+[Mon Nov 11 2019 14:11:39 GMT+0800 (GMT+08:00)] /favicon.ico
+NotFoundError: Not Found
+    at e:\bilibili-vue+node-blog\bilibili\back\app.js:170:8
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:635:15
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:260:14)
+    at Function.handle (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:174:3)
+    at router (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_serve-static@1.14.1@serve-static\index.js:121:7)
+    at SendStream.emit (events.js:182:13)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:270:17)
+    at SendStream.onStatError (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:421:12)
+    at onstat (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:726:26)
+    at FSReqWrap.oncomplete (fs.js:154:21)
+[Mon Nov 11 2019 14:13:24 GMT+0800 (GMT+08:00)] /favicon.ico
+NotFoundError: Not Found
+    at e:\bilibili-vue+node-blog\bilibili\back\app.js:170:8
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:635:15
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:260:14)
+    at Function.handle (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:174:3)
+    at router (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_serve-static@1.14.1@serve-static\index.js:121:7)
+    at SendStream.emit (events.js:182:13)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:270:17)
+    at SendStream.onStatError (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:421:12)
+    at onstat (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:726:26)
+    at FSReqWrap.oncomplete (fs.js:154:21)
+[Mon Nov 11 2019 14:13:26 GMT+0800 (GMT+08:00)] /favicon.ico
+NotFoundError: Not Found
+    at e:\bilibili-vue+node-blog\bilibili\back\app.js:170:8
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:635:15
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:260:14)
+    at Function.handle (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:174:3)
+    at router (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_serve-static@1.14.1@serve-static\index.js:121:7)
+    at SendStream.emit (events.js:182:13)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:270:17)
+    at SendStream.onStatError (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:421:12)
+    at onstat (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:726:26)
+    at FSReqWrap.oncomplete (fs.js:154:21)
+[Mon Nov 11 2019 14:13:26 GMT+0800 (GMT+08:00)] /favicon.ico
+NotFoundError: Not Found
+    at e:\bilibili-vue+node-blog\bilibili\back\app.js:170:8
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:635:15
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:260:14)
+    at Function.handle (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:174:3)
+    at router (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_serve-static@1.14.1@serve-static\index.js:121:7)
+    at SendStream.emit (events.js:182:13)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:270:17)
+    at SendStream.onStatError (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:421:12)
+    at onstat (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:726:26)
+    at FSReqWrap.oncomplete (fs.js:154:21)
+[Mon Nov 11 2019 14:27:50 GMT+0800 (GMT+08:00)] /favicon.ico
+NotFoundError: Not Found
+    at e:\bilibili-vue+node-blog\bilibili\back\app.js:170:8
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:635:15
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:260:14)
+    at Function.handle (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:174:3)
+    at router (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_serve-static@1.14.1@serve-static\index.js:121:7)
+    at SendStream.emit (events.js:182:13)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:270:17)
+    at SendStream.onStatError (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:421:12)
+    at onstat (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:726:26)
+    at FSReqWrap.oncomplete (fs.js:154:21)
+[Mon Nov 11 2019 14:27:54 GMT+0800 (GMT+08:00)] /favicon.ico
+NotFoundError: Not Found
+    at e:\bilibili-vue+node-blog\bilibili\back\app.js:170:8
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:635:15
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:260:14)
+    at Function.handle (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:174:3)
+    at router (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_serve-static@1.14.1@serve-static\index.js:121:7)
+    at SendStream.emit (events.js:182:13)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:270:17)
+    at SendStream.onStatError (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:421:12)
+    at onstat (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:726:26)
+    at FSReqWrap.oncomplete (fs.js:154:21)
+[Mon Nov 11 2019 14:27:56 GMT+0800 (GMT+08:00)] /favicon.ico
+NotFoundError: Not Found
+    at e:\bilibili-vue+node-blog\bilibili\back\app.js:170:8
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:635:15
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:260:14)
+    at Function.handle (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:174:3)
+    at router (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_serve-static@1.14.1@serve-static\index.js:121:7)
+    at SendStream.emit (events.js:182:13)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:270:17)
+    at SendStream.onStatError (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:421:12)
+    at onstat (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:726:26)
+    at FSReqWrap.oncomplete (fs.js:154:21)
+[Mon Nov 11 2019 14:27:58 GMT+0800 (GMT+08:00)] /favicon.ico
+NotFoundError: Not Found
+    at e:\bilibili-vue+node-blog\bilibili\back\app.js:170:8
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:635:15
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:260:14)
+    at Function.handle (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:174:3)
+    at router (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\layer.js:95:5)
+    at trim_prefix (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:317:13)
+    at e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:284:7
+    at Function.process_params (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:335:12)
+    at next (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_express@4.17.1@express\lib\router\index.js:275:10)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_serve-static@1.14.1@serve-static\index.js:121:7)
+    at SendStream.emit (events.js:182:13)
+    at SendStream.error (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:270:17)
+    at SendStream.onStatError (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:421:12)
+    at onstat (e:\bilibili-vue+node-blog\bilibili\back\node_modules\_send@0.17.1@send\index.js:726:26)
+    at FSReqWrap.oncomplete (fs.js:154:21)

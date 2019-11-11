@@ -26,12 +26,13 @@ const cluster= require("cluster");
 const cpuNum =  require('os').cpus().length;
 
 
+//邮箱预警处理
+const mail = require('./mail.js')
 
 
 
 
-
-//限制重启频率为61分钟20次数以内
+//限制重启频率为1分钟20次数以内
 const limit = 20;
 const during = 60000;
 const restart = [];
@@ -110,6 +111,9 @@ if(cluster.isMaster){
 
   //监听请求
   server.on('request',(req, res) => {
+    //触发异常测试
+    // testObject.vaule = 0;
+
     //模拟随机报错，集群测试
     // let time = Date.now(),
     // delta = Math.random() * 1000;
@@ -122,7 +126,9 @@ if(cluster.isMaster){
   });
 
   process.on("uncaughtException",(err) => {
+      //服务器异常提示
       console.log(`error:${err}`,"进程出错");
+      mail.send('[服务器异常]' + err.toString(), err.stack)
 
       process.send({act: 'suicide'});
       server.close(() => {
@@ -132,6 +138,7 @@ if(cluster.isMaster){
           process.exit(1);
       }, 10000);
   });
+ 
 
 
   server.on('listening', () =>{
@@ -211,3 +218,4 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 }
+

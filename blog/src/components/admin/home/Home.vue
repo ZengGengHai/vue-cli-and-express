@@ -78,7 +78,8 @@
 export default {
   created() {
   //  this.pushName();
-     this.$router.push('/admin/databases/table/admin')
+    
+    this.$router.push('/admin/databases/table/admin')
   },
   name: 'Home',
   data () {

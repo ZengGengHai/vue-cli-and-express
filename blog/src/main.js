@@ -85,10 +85,16 @@ router.beforeEach((to, from, next) => {
           console.log('vue-router路由守卫使用:进入后台页面，需要验证身份，先进行简单的验证：是否有token')
           if(localStorage.getItem('token')){
             console.log("有token")
+            next();
           }else{
             console.log('无token')
+            alert('请登录后再访问');
+            next({
+              path:'/admin/login'
+            });
+
           }
-          next();
+         
 
         }
       }else{

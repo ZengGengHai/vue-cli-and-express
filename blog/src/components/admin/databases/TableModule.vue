@@ -258,18 +258,15 @@
 export default {
     async created(){
   
-
       this.Table =this.$route.params.id;
-      console.log('当前表名：')
-
+      console.log('当前表名:',this.Table)
       let column = await this.getColumn();
       if(column.status === 200){
         if(column.data.code === 0){
           let tableColumn = column.data.data
           console.log(tableColumn)
           this.tableColumn = tableColumn
-       
-          console.log()
+
         }
       }
       this.getDataList();
@@ -377,7 +374,7 @@ export default {
 
         }
         })
-       console.log(res)
+       
        if(res.status === 200){
          let code = res.data.code
          if(code === 2) {
