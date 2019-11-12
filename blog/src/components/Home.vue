@@ -71,6 +71,7 @@ export default {
   },
   created() {
     this.getBlogList();
+ 
   },
   computed: {
     
@@ -82,12 +83,7 @@ export default {
       //    })()
       //  }
     
-    this.$nextTick(e => {
-      // this.article.map((item,index) =>{
-      //   item.isOpenContent = false;
-      // })
-      // console.log(this.article) 
-    });
+
   },
 
   methods: {
@@ -105,6 +101,15 @@ export default {
           console.log(data)
           this.total = data.count;
           this.blogLists = data.list;
+          this.$nextTick(() => {
+              let blocks = document.querySelectorAll('pre');
+              console.log(blocks)
+              blocks.forEach(block => {
+                  hljs.highlightBlock(block);
+                });
+                
+          });
+
 
         }
 

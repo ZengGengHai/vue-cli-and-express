@@ -44,15 +44,14 @@ export default {
             //     }
             // );
               this.article = res.data
-              this.$nextTick(() => {
-                  this.article = res.data;
+      
                   this.$nextTick(() => {
                       let blocks = document.querySelectorAll('pre code');
                       blocks.forEach(block => {
                           hljs.highlightBlock(block);
                       });
-                  })
-              });
+                  });
+             
             
 
         })
