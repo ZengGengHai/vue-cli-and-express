@@ -21,8 +21,6 @@ const storage = multer.diskStorage({
         var first = file.originalname.lastIndexOf(".");//取到文件名开始到最后一个点的长度
         var nameLength = file.originalname.length;//取到文件名长度
         var fileSuffix = file.originalname.substring(first, nameLength );//截取获得后缀名
-        console.log(fileSuffix)
-
 
         cb(null, Date.now() +Math.floor(100*Math.random())+fileSuffix)
     }
@@ -122,7 +120,7 @@ router.get('/blog_list', function(req, res, next) {
         }).then((e) => { 
             
             if(isNaN(e)){
-                console.log(e)
+  
                 if(e.count === 0){
                     returnJSON(res,{
                         code:2,
@@ -164,9 +162,9 @@ router.get('/blog_list', function(req, res, next) {
 router.post('/blog_create',function(req,res,next){  
    
         let {title,content,abstract,type} = req.body
-        console.log(title)
+ 
         if(title!=undefined  || content !=undefined || abstract!=undefined  || type!=undefined ){
-            console.log("ok")
+       
             db.Blog.create({title,content,abstract,type}).then(function(result){
                 if(result){
                     returnJSON(res,{

@@ -266,7 +266,6 @@ export default {
           let tableColumn = column.data.data
           console.log(tableColumn)
           this.tableColumn = tableColumn
-
         }
       }
       this.getDataList();

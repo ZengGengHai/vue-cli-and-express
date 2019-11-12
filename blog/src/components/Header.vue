@@ -38,9 +38,6 @@ export default {
                     title:'home',
                     path:"/index"
                 },{
-                    title:'about',
-                     path:"/about"
-                },{
                     title:'note',
                      path:"/note"
                 }
@@ -69,19 +66,19 @@ export default {
         //     this.itemCheck = 0;
         // }
    
-                this.list.forEach((element,index) => {
-                
-                        let reg = '^[^/]*\/';
-                        let res = this.$route.name.replace(reg,''); 
-                        console.log(res) 
-                        console.log(element.title)
-                        if(element.title == res){  
-                            this.itemCheck = index;
-                        } 
-                        if(res == "article"){
-                            this.itemCheck =2;
-                        }  
-                });
+        this.list.forEach((element,index) => {
+        
+                let reg = '^[^/]*\/';
+                let res = this.$route.name.replace(reg,''); 
+                console.log(res) 
+                console.log(element.title)
+                if(element.title == res){  
+                    this.itemCheck = index;
+                } 
+                if(res == "article"){
+                    this.itemCheck =1;
+                }  
+        });
         
      
     },

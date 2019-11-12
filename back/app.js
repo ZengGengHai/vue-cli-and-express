@@ -11,10 +11,12 @@ const router = express.Router();
 const noteRouter = require('./routes/note');
 const blogRouter = require('./routes/blogApi')
 const adminRouter = require('./routes/adminApi')
-
+const statisticsRouter = require('./routes/statisticsApi')
 
 //JSON WEBTOKEN
 const jwt = require('jsonwebtoken');
+
+
 
 //日记morgan组件
 const app = express();
@@ -34,26 +36,37 @@ const accessLogStream = rfs('access.log', {
 //自己编写中间间统计用户访问
 const StatisticsLog = fs.createWriteStream('log/statistics.log', {flags: 'a'})
 const statistics = (req,res,next) =>{
+
   //访问日记
-  let user_ip = req.headers['x-forwarded-for'] ||
-  req.connection.remoteAddress ||
-  req.socket.remoteAddress ||
-  req.connection.socket.remoteAddress;;
-  let time = moment(new Date()).format(('YYYY-MM-DD HH:mm:ss'));
-  if(req.url.indexOf('static')<0){
-    let content = user_ip+' '+time+' '+req.url+' '+req.headers['referer']+' '+req.method+' '+req.headers['user-agent'];
-    console.log(content)
-    StatisticsLog.write(content);
-    StatisticsLog.write('\n');
+  if(req.method == undefined  || req.headers['referer'] == undefined || req.url == undefined ){
+     next();
+     console.log("不记录日记")
+  }else{
+    console.log("记录日记")
+    let user_ip = req.headers['x-forwarded-for'] ||
+    req.connection.remoteAddress ||
+    req.socket.remoteAddress ||
+    req.connection.socket.remoteAddress;;
+    let time = moment(new Date()).format(('YYYY-MM-DD HH:mm:ss'));
+    if(req.url.indexOf('static')<0){
+      let content = user_ip+' '+time+' '+req.url+' '+req.headers['referer']+' '+req.method+' '+req.headers['user-agent'];
+      console.log(content)
+      StatisticsLog.write(content);
+      StatisticsLog.write('\n');
+    }
+    next();
+
   }
-  next();
+
+
 };
 
 app.use(statistics);
 
 /**
- * app.use(express.static('public/upload-single'));
+ * 
  */
+app.use(express.static('public'));
 
 
 // view engine setup
@@ -66,6 +79,7 @@ app.all('*', function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With');
   res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
+  res.setHeader('Access-Control-Max-Age', 86400);
   res.header("X-Powered-By", ' 3.2.1')
   // res.header("Content-Type", "application/json;charset=utf-8");
   next();
@@ -167,10 +181,11 @@ app.use('/', indexRouter);
 app.use('/api/note',noteRouter);
 app.use('/api/',blogRouter);
 app.use('/api/',adminRouter);
+app.use('/api/statistics',statisticsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  next(createError(404));
+  next();
 });
 
 

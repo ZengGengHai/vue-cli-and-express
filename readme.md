@@ -256,4 +256,8 @@ http://localhost:8080/index
     npm i nodemailer -S
 
 16. 使用express 日记组件morgan
-    npm i express morgan -S
+    npm i  morgan -S
+
+17. 文件流式读取
+    npm i readline -S
+    npm i stream -S

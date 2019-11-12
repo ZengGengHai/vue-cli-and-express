@@ -71,8 +71,6 @@ export default {
   },
   created() {
     this.getBlogList();
-
-
   },
   computed: {
     
@@ -116,7 +114,7 @@ export default {
     },
     openContent(id){
       console.log(this.$refs.tip[0].innerText)
-      this.$refs.tip[0].innerText = "收起"
+      this.$refs.tip[0].innerText = "点击收起"
       this.blogLists.map((item,index) =>{
           if(id === item.id){
             console.log( this.$refs.content[index].style.height)

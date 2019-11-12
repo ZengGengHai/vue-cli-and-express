@@ -45,11 +45,30 @@ const isTooFrequently = function (callback) {
      restart.slice(-1 * limit)
   }
   // 最后的重启次数大于或等于限定次数且最后一次重启距离 limit 第一条的重启时间如果小于单位时间，则代表单位时间内重启太频繁了
-   restart.length >= limit && restart[restart.length - 1] - restart[0] < during
+  //return  restart.length >= limit && restart[restart.length - 1] - restart[0] < during
   callback({
     isToF:restart.length >= limit && restart[restart.length - 1] - restart[0] < during,
     length,
     num:restart.length
+  });
+}
+
+
+//限制邮箱发送频率
+const mailLimit = 1;
+const mailStart = [];
+const mailDuring = 60000;
+const isTooFrequentlyMail = function (callback) {
+  let time = Date.now()
+  let length = mailStart.push(time)
+  // mailStart 数组永远只取最后限定条数
+  if (length > mailLimit) {
+    mailStart.slice(-1 * mailLimit)
+  }
+  // 最后的重启次数大于或等于限定次数且最后一次重启距离 limit 第一条的重启时间如果小于单位时间，则代表单位时间内重启太频繁了
+  
+  callback({
+    isToF:mailStart.length >=  mailLimit && mailStart[mailStart.length - 1] - mailStart[0] < mailDuring,
   });
 }
 
@@ -111,6 +130,10 @@ if(cluster.isMaster){
 
   //监听请求
   server.on('request',(req, res) => {
+    if(req.url=="/favicon.ico"){
+      console.log(req.url);
+  　　res.end();
+　　　}
     //触发异常测试
     // testObject.vaule = 0;
 
@@ -128,7 +151,14 @@ if(cluster.isMaster){
   process.on("uncaughtException",(err) => {
       //服务器异常提示
       console.log(`error:${err}`,"进程出错");
-      mail.send('[服务器异常]' + err.toString(), err.stack)
+
+      isTooFrequentlyMail(e =>{
+        console.log(e.isToF)
+        if(e.isToF){
+          mail.send('[服务器异常]' + err.toString(), err.stack)
+        }
+      })
+
 
       process.send({act: 'suicide'});
       server.close(() => {

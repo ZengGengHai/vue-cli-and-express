@@ -9,6 +9,9 @@ import router from './router'
 // import 'element-ui/lib/theme-chalk/index.css';
 // Vue.use(ElementUI);
 
+//格式化时间
+import moment from 'moment'
+Vue.prototype.$moment=moment  //全局加载
 
 //富文本的使用
 import VueQuillEditor from 'vue-quill-editor'
@@ -63,7 +66,6 @@ axios.interceptors.response.use(function (response){
   }
   return response;
 })
-
 
 
 //引用qs使axios的post对象序列化

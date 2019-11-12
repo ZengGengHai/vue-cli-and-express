@@ -1,7 +1,7 @@
-var express = require('express');
-var router = express.Router();
-var fs = require('fs');
-var marked = require('marked');
+const express = require('express');
+const router = express.Router();
+const fs = require('fs');
+const marked = require('marked');
 
 /* GET home page. */
 router.get('/getNote', function(req, res, next) {

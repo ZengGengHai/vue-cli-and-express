@@ -23,7 +23,7 @@
             <el-col :span="24">
               <h5 style="text-align:center">导览</h5>
               <el-menu
-                default-active="/admin/databases/table/admin"
+                :default-active="$route.path"
                  class="el-menu-vertical-demo"
                 @open="handleOpen"
                 @close="handleClose"
@@ -32,7 +32,7 @@
                 :collapse="isCollapse"
 
                 >
-                <el-submenu index="/admin/databases/table" >
+                <el-submenu index="/admin/databases/table/admin" >
                   <template slot="title" >
                     <i class="el-icon-location" ></i>
                     <span >开发</span>
@@ -79,7 +79,7 @@ export default {
   created() {
   //  this.pushName();
     
-    this.$router.push('/admin/databases/table/admin')
+  // this.$router.push('/admin/databases/table/admin')
   },
   name: 'Home',
   data () {
