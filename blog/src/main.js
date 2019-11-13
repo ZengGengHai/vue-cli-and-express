@@ -16,7 +16,7 @@ Vue.prototype.$moment=moment  //全局加载
 //富文本的使用
 import VueQuillEditor from 'vue-quill-editor'
 // import 'quill/dist/quill.core.css'
-// import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.snow.css'
 // import 'quill/dist/quill.bubble.css'
 Vue.use(VueQuillEditor)
 
