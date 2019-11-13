@@ -85,7 +85,8 @@ module.exports = {
     axios:'axios',
     qs:'Qs',
     highlight:'hljs',
-    'vue-router':'VueRouter'
+    'vue-router':'VueRouter',
+    moment:'moment'
   },
 
 }

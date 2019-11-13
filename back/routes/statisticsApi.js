@@ -20,6 +20,7 @@ router.get('/getTodayVisit/:time', function(req, res, next) {
          
         }
     });
+
     rl.on('close',function(){
       let array = Object.keys(pathCountMap).sort((a,b) => {
             return pathCountMap[b]-pathCountMap[a];
@@ -32,7 +33,8 @@ router.get('/getTodayVisit/:time', function(req, res, next) {
       returnJSON(res,{
         code:0,
         data:newArray
-      })         
+      })   
+         
     })
 
 });

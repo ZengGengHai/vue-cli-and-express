@@ -57,7 +57,7 @@ const isTooFrequently = function (callback) {
 //限制邮箱发送频率
 const mailLimit = 1;
 const mailStart = [];
-const mailDuring = 60000;
+const mailDuring = 3600000;
 const isTooFrequentlyMail = function (callback) {
   let time = Date.now()
   let length = mailStart.push(time)
@@ -151,10 +151,12 @@ if(cluster.isMaster){
   process.on("uncaughtException",(err) => {
       //服务器异常提示
       console.log(`error:${err}`,"进程出错");
-
+      
       isTooFrequentlyMail(e =>{
         console.log(e.isToF)
         if(e.isToF){
+          console.log('禁止过于频繁发送邮箱')
+        }else{
           mail.send('[服务器异常]' + err.toString(), err.stack)
         }
       })

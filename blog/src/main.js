@@ -10,13 +10,13 @@ import router from './router'
 // Vue.use(ElementUI);
 
 //格式化时间
-import moment from 'moment'
+// import moment from 'moment'
 Vue.prototype.$moment=moment  //全局加载
 
 //富文本的使用
 import VueQuillEditor from 'vue-quill-editor'
 // import 'quill/dist/quill.core.css'
-import 'quill/dist/quill.snow.css'
+// import 'quill/dist/quill.snow.css'
 // import 'quill/dist/quill.bubble.css'
 Vue.use(VueQuillEditor)
 
@@ -97,7 +97,6 @@ router.beforeEach((to, from, next) => {
 
           }
          
-
         }
       }else{
           console.log("vue-router路由守卫使用:非后台页面，不用验证身份")
