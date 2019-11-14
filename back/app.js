@@ -101,6 +101,8 @@ app.use(function (req, res, next) {
          next();
       //后台页面每次请求一次都要验证token是否有效
       }else{
+        console.log("token验证")
+        console.log(req.headers)
         
         if(req.headers.authorization){
           console.log('有token')
@@ -204,7 +206,11 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-
+function returnJSON(res,json){
+  res.statusCode = 200;
+  res.setHeader('Content-Type','application/json');
+  res.end(JSON.stringify(json))
+};
 
 
 module.exports = app;
