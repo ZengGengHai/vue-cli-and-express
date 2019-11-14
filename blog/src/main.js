@@ -62,10 +62,9 @@ axios.interceptors.response.use(function (response){
       localStorage.removeItem('token')
       router.push("/admin/login")
     }
-    return response;
 
   }
-  
+  return response;
 })
 
 
@@ -88,7 +87,6 @@ router.beforeEach((to, from, next) => {
           console.log('vue-router路由守卫使用:进入后台页面，需要验证身份，先进行简单的验证：是否有token')
           if(localStorage.getItem('token')){
             
-
             next();
           }else{
             console.log('无token')
