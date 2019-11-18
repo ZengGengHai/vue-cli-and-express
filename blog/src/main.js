@@ -39,10 +39,10 @@ axios.interceptors.request.use(function (config) {
     console.log('后台页面发送的请求')
     if(router.history.current.fullPath.indexOf('admin_login') >= 1){
       console.log('登录页面')
-  
     }else{
       console.log('不是登录页面,fwt验证,请求是携带headers.Authorization.token')
       config.headers.Authorization = localStorage.getItem('token')
+      console.log(localStorage.getItem('token'))
       console.log('headers携带验证信息')
     }
   }else{

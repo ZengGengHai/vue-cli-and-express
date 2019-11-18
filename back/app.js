@@ -119,10 +119,7 @@ app.use(function (req, res, next) {
             }
           });
         }else{
-            res.json({
-              code:-2,
-              msg:'token无效'
-          });
+           next()
         }
       }
   
