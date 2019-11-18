@@ -14,9 +14,11 @@
     "element-ui": "^2.12.0",
     "highlight.js": "^9.15.10",
     "moment": "^2.24.0",
+    "tb-skeleton": "^0.3.6",
     "vue": "^2.5.2",
     "vue-quill-editor": "^3.0.6",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue-skeleton-webpack-plugin": "^1.2.2"
   },
   "devDependencies": {
     "array-includes": "^3.0.3",

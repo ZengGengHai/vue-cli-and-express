@@ -261,3 +261,6 @@ http://localhost:8080/index
 17. 文件流式读取
     npm i readline -S
     npm i stream -S
+
+18. 首页骨架的使用
+    npm install vue-skeleton-webpack-plugin

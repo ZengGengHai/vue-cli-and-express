@@ -35,10 +35,10 @@ export default {
         return {
             list:[
                 {
-                    title:'home',
+                    title:'文章列表',
                     path:"/index"
                 },{
-                    title:'note',
+                    title:'文档收纳',
                      path:"/note"
                 }
             ],

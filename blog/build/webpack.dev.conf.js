@@ -12,6 +12,10 @@ const portfinder = require('portfinder')
 
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
+const SkeletonWebpackPlugin = require('vue-skeleton-webpack-plugin')
+function resolve(dir) {
+    return path.join(__dirname, '..', dir)
+}
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
@@ -64,7 +68,14 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         to: config.dev.assetsSubDirectory,
         ignore: ['.*']
       }
-    ])
+    ]),
+    new SkeletonWebpackPlugin({
+        webpackConfig: {
+            entry: {
+                app: resolve('./src/entry-skeleton.js')
+            }
+        }
+    })
   ]
 })
 

@@ -86,7 +86,8 @@ module.exports = {
     qs:'Qs',
     highlight:'hljs',
     'vue-router':'VueRouter',
-    moment:'moment'
+    moment:'moment',
+    
   },
 
 }
