@@ -111,6 +111,9 @@ router.beforeEach((to, from, next) => {
 
 
 
+Vue.config.devtools = false;
+
+
 
 
 
@@ -126,11 +129,3 @@ new Vue({
 
 
 
-
-// "axios": "^0.19.0",
-// "element-ui": "^2.12.0",
-// "highlight.js": "^9.15.10",
-// "marked": "^0.7.0",
-// "vue": "^2.5.2",
-// "vue-quill-editor": "^3.0.6",
-// "vue-router": "^3.0.1"
