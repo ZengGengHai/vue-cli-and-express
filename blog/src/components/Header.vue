@@ -65,19 +65,23 @@ export default {
         // }else{
         //     this.itemCheck = 0;
         // }
-   
+      
         this.list.forEach((element,index) => {
         
                 let reg = '^[^/]*\/';
                 let res = this.$route.name.replace(reg,''); 
                 console.log(res) 
-                console.log(element.title)
-                if(element.title == res){  
-                    this.itemCheck = index;
-                } 
+                // console.log(element.title)
+                // if(element.title == res){  
+                //     this.itemCheck = index;
+                // } 
                 if(res == "article"){
-                    this.itemCheck =1;
-                }  
+                    this.itemCheck = 0;
+                }
+                if(res == "note" || res == "article"){
+                    this.itemCheck = 1;
+                }
+             
         });
         
      
