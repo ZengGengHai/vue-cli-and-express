@@ -12,6 +12,7 @@ const noteRouter = require('./routes/note');
 const blogRouter = require('./routes/blogApi')
 const adminRouter = require('./routes/adminApi')
 const friendRouter = require('./routes/friendApi')
+const lifeRecordRouter = require('./routes/lifeRecordApi')
 const statisticsRouter = require('./routes/statisticsApi')
 
 //JSON WEBTOKEN
@@ -185,6 +186,7 @@ app.use('/api/note',noteRouter);
 app.use('/api/',blogRouter);
 app.use('/api/',adminRouter);
 app.use('/api/',friendRouter);
+app.use('/api/',lifeRecordRouter);
 app.use('/api/statistics',statisticsRouter);
 
 // catch 404 and forward to error handler

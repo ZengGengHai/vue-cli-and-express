@@ -72,6 +72,18 @@ const Admin = sequelize.define('admin',{
     },
     password:{
         type:Sequelize.STRING
+    },
+    createdAt: {
+        type: Sequelize.DATE,
+        get() {
+            return moment(this.getDataValue('createdAt')).format('YYYY-MM-DD HH:mm:ss');
+        }
+    },
+    updatedAt: {
+        type: Sequelize.DATE,
+        get() {
+            return moment(this.getDataValue('updatedAt')).format('YYYY-MM-DD HH:mm:ss');
+        }
     }
 },{
     // 自动维护时间戳 [ created_at、updated_at ]
@@ -97,6 +109,18 @@ const Friend = sequelize.define('friend',{
     }, 
     introduce:{
         type:Sequelize.STRING
+    },
+    createdAt: {
+        type: Sequelize.DATE,
+        get() {
+            return moment(this.getDataValue('createdAt')).format('YYYY-MM-DD HH:mm:ss');
+        }
+    },
+    updatedAt: {
+        type: Sequelize.DATE,
+        get() {
+            return moment(this.getDataValue('updatedAt')).format('YYYY-MM-DD HH:mm:ss');
+        }
     }
 },{
     // 自动维护时间戳 [ created_at、updated_at ]
@@ -106,6 +130,36 @@ const Friend = sequelize.define('friend',{
     freezeTableName: true
 })
 
+//定义随笔记录模型
+const LifeRecord = sequelize.define('lifeRecord',{
+  
+    id:{
+        type:Sequelize.INTEGER,
+        primaryKey:true,
+        autoIncrement:true
+    },
+    content:{
+        type:Sequelize.STRING
+    },
+    createdAt: {
+        type: Sequelize.DATE,
+        get() {
+            return moment(this.getDataValue('createdAt')).format('YYYY-MM-DD HH:mm:ss');
+        }
+    },
+    updatedAt: {
+        type: Sequelize.DATE,
+        get() {
+            return moment(this.getDataValue('updatedAt')).format('YYYY-MM-DD HH:mm:ss');
+        }
+    }
+},{
+    // 自动维护时间戳 [ created_at、updated_at ]
+    timestamps: true, 
+    // 禁止修改表名，默认情况下，sequelize将自动将所有传递的模型名称（define的第一个参数）转换为复数
+    // 但是为了安全着想，复数的转换可能会发生变化，所以禁止该行为
+    freezeTableName: true
+})
 
 
 
@@ -118,4 +172,4 @@ sequelize.authenticate().then(()=>{
 
 
 
-module.exports = {Blog,Admin, Friend };
+module.exports = {Blog,Admin,Friend,LifeRecord};

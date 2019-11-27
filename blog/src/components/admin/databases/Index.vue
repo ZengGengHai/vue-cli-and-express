@@ -22,6 +22,7 @@
                     <el-col :span="24"><div class="grid-content" ><router-link :to="{ path: '/admin/databases/table/admin'}">用户表</router-link> </div></el-col>
                     <el-col :span="24"><div class="grid-content "><router-link :to="{ path: '/admin/databases/table/blog'}">文章表</router-link></div></el-col>
                     <el-col :span="24"><div class="grid-content "><router-link :to="{ path: '/admin/databases/table/friend'}">友链表</router-link></div></el-col>
+                    <el-col :span="24"><div class="grid-content "><router-link :to="{ path: '/admin/databases/table/lifeRecord'}">生活记录表</router-link></div></el-col>
                 </el-row>
                  
               </div>

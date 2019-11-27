@@ -41,6 +41,9 @@ export default {
                     title:'文档收纳',
                      path:"/note"
                 },{
+                    title:'随笔记录',
+                     path:"/lifeRecord"
+                },{
                     title:'友情链接',
                      path:"/friend"
                 }
@@ -84,8 +87,11 @@ export default {
                 if(res == "note" || res == "article"){
                     this.itemCheck = 1;
                 }
-                if(res == "friend" ){
+                if(res == "lifeRecord" ){
                     this.itemCheck = 2;
+                }
+                if(res == "friend" ){
+                    this.itemCheck = 3;
                 }
              
         });
