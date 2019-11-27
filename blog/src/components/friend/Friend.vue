@@ -68,6 +68,9 @@ export default {
        text-justify:distribute-all-lines;
    }
    .friend-item{
+       width:95%;
+       border:1px solid #f5f1f1;
+       margin: auto;
        box-shadow: 2px 2px 15px #eee;
        margin-top: 20px;
        box-sizing: border-box;
