@@ -26,39 +26,24 @@ export default {
     },
     created(){
         this.$axios.get('/note/getNoteByName/'+this.$route.params.id)
-        .then(res=>{
-            // this.article=res.data
-            //  marked.setOptions({
-            //     renderer: new marked.Renderer(),
-            //     highlight: function(code) {
-            //         return hljs.highlightAuto(code).value;
-            //     },
-            //     pedantic:false,
-            //     gfm: true,
-            //     tables: true,
-            //     breaks: false,
-            //     sanitize: false,
-            //     smartLists: false,
-            //     smartypants: true,
-            //     xhtml: true
-            //     }
-            // );
-              this.article = res.data
-      
-                  this.$nextTick(() => {
-                      let blocks = document.querySelectorAll('pre code');
-                      blocks.forEach(block => {
-                          hljs.highlightBlock(block);
-                      });
-                  });
-             
-            
+            .then(res=>{
 
-        })
-        .catch(res=>{
-            console.log("失败")
-        })
-    }
+                this.article = res.data
+        
+                    this.$nextTick(() => {
+                        let blocks = document.querySelectorAll('pre code');
+                        blocks.forEach(block => {
+                            hljs.highlightBlock(block);
+                        });
+                    });
+                
+                
+
+            })
+            .catch(res=>{
+                console.log("失败")
+            })
+        }
 }
 </script>
 

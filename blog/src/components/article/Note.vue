@@ -76,19 +76,7 @@ export default {
 </script>
 
 <style lang="">
-/* 
-.fade-enter{
-  opacity:0.3;
-}
-.fade-enter-active{
-  transition:opacity .5s;
-}
-.fade-leave-active{
-  transition:transform .5s;
-}
-.fade-leave-to{
-  transform:translateX(10px);
-} */
+
     .cabinet-box{    
         display: flex;
         flex-direction: row;

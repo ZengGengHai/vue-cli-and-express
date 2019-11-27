@@ -59,7 +59,7 @@ export default {
     /* padding-top:8.533em; */
   }
   .blog-child{
-     padding-top:8vh;
+     padding-top:10vh;
      height:92vh;
   }
 }

@@ -9,7 +9,7 @@ import About from "@/components/about/About"
 
 import Note from "@/components/article/note"
 import Article from "@/components/article/Article"
-
+import Friend from "@/components/friend/Friend"
 import  AdminHome from "@/components/admin/home/Home"
 import  AdminLogin from "@/components/admin/login/Login"
 import  DataBases from "@/components/admin/databases/Index"
@@ -40,6 +40,14 @@ const router = new VueRouter({
       components: {
         header:Header,
         main:About
+      }
+    },
+    {
+      path: '/friend',
+      name: 'friend',
+      components: {
+        header:Header,
+        main:Friend
       }
     },
     {

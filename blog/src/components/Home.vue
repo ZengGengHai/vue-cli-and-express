@@ -19,11 +19,7 @@
           <p style="letter-spacing:1px;color:#333;">{{item.abstract}}</p>
           <div><div  style="font-size:12px;color:green;font-weight:bloder;cursor: pointer;" @click="openContent(item.id)" ref="tip" >查看内容</div></div>
           <div class="ql-container ql-snow blog-content " style="height:0px;border:0px;" ref="content"><div class="ql-editor" v-html="item.content" ></div></div>
-          <!-- <div class="ql-container ql-snow">
-    <div class="ql-editor" v-html="item.content">
-    </div>
-</div> -->
-          
+                    
           <div style="margin-top:15px;color: #738a94;font-size:10px;">{{item.updatedAt}}</div>
         </el-card>
      </div>
@@ -179,7 +175,7 @@ export default {
 }
 </script>
 
-<style >
+<style scoped >
 .ql-container.ql-snow{
   border:0px;
   /* height:0px; */

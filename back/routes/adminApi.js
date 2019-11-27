@@ -293,29 +293,31 @@ router.post('/admin_update',function(req,res,next){
                       code:-2,
                       msg:"Id参数必须写"
                   })
-               }
-               if(username !=undefined || password != undefined){
-                  
-                  db.Admin.update({username,password}, {where: {id}}
-                      ).then(function(result){
-                      if(result){
-                          returnJSON(res,{
-                              code:0,
-                              data:{ id}
-                          })   
-                      }else{
-                          returnJSON(res,{
-                              code:-2,
-                              msg:'update false'
-                          })
-                      }
-                  })
                }else{
-                  returnJSON(res,{
-                      code:-2,
-                      msg:"Id参数必须写 "
-                  }) 
+                if(username !=undefined || password != undefined){
+                  
+                    db.Admin.update({username,password}, {where: {id}}
+                        ).then(function(result){
+                        if(result){
+                            returnJSON(res,{
+                                code:0,
+                                data:{ id}
+                            })   
+                        }else{
+                            returnJSON(res,{
+                                code:-2,
+                                msg:'update false'
+                            })
+                        }
+                    })
+                 }else{
+                    returnJSON(res,{
+                        code:-2,
+                        msg:"Id参数必须写 "
+                    }) 
+                 }
                }
+
 
       
     

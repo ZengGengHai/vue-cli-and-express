@@ -2,6 +2,7 @@ const Sequelize = require('sequelize');
 const moment = require('moment')
 const sequelize = new Sequelize('my_db','root','server',{
     host:'139.199.0.205',
+    // host:'localhost',
     dialect:'mysql',
     timezone: '+08:00', // 保存为本地时区
     pool: {
@@ -80,6 +81,32 @@ const Admin = sequelize.define('admin',{
     freezeTableName: true
 })
 
+//定义友情链接模型
+const Friend = sequelize.define('friend',{
+  
+    id:{
+        type:Sequelize.INTEGER,
+        primaryKey:true,
+        autoIncrement:true
+    },
+    name:{
+        type:Sequelize.STRING
+    },
+    link:{
+        type:Sequelize.STRING
+    }, 
+    introduce:{
+        type:Sequelize.STRING
+    }
+},{
+    // 自动维护时间戳 [ created_at、updated_at ]
+    timestamps: true, 
+    // 禁止修改表名，默认情况下，sequelize将自动将所有传递的模型名称（define的第一个参数）转换为复数
+    // 但是为了安全着想，复数的转换可能会发生变化，所以禁止该行为
+    freezeTableName: true
+})
+
+
 
 
 //测试连接
@@ -91,4 +118,4 @@ sequelize.authenticate().then(()=>{
 
 
 
-module.exports = {Blog,Admin};
+module.exports = {Blog,Admin, Friend };
