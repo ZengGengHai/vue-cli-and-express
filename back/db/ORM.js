@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const moment = require('moment')
 const sequelize = new Sequelize('my_db','root','server',{
-    host:'139.199.0.205',
+    host:'',
     // host:'localhost',
     dialect:'mysql',
     timezone: '+08:00', // 保存为本地时区
